@@ -34,7 +34,7 @@ public class ActionExecutingViewFactory implements ViewFactory {
 	/**
 	 * The action to execute.
 	 */
-	private Action action;
+	private final Action action;
 
 	/**
 	 * Create a new action invoking view factory
@@ -52,7 +52,7 @@ public class ActionExecutingViewFactory implements ViewFactory {
 		return new ActionExecutingView(action, context);
 	}
 
-	private static class ActionExecutingView implements View {
+	private static final class ActionExecutingView implements View {
 
 		private Action action;
 

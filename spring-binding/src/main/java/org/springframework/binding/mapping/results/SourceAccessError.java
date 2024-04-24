@@ -26,7 +26,7 @@ import org.springframework.binding.mapping.Mapping;
  */
 public class SourceAccessError extends AbstractMappingResult {
 
-	private EvaluationException cause;
+	private final EvaluationException cause;
 
 	/**
 	 * Creates a new source access error.

@@ -32,9 +32,9 @@ import org.springframework.binding.expression.support.FluentParserContext;
 
 public class BeanWrapperExpressionParserTests {
 
-	private BeanWrapperExpressionParser parser = new BeanWrapperExpressionParser();
+	private final BeanWrapperExpressionParser parser = new BeanWrapperExpressionParser();
 
-	private TestBean bean = new TestBean();
+	private final TestBean bean = new TestBean();
 
 	@Test
 	public void testParseSimple() {

@@ -16,7 +16,7 @@ import org.springframework.util.Assert;
  */
 public class BinderConfiguration {
 
-	private Set<Binding> bindings = new LinkedHashSet<>();
+	private final Set<Binding> bindings = new LinkedHashSet<>();
 
 	/**
 	 * Adds a new binding to this binding configuration.

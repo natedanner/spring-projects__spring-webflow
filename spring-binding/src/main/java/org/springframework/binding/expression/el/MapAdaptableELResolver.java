@@ -51,7 +51,7 @@ public class MapAdaptableELResolver extends ELResolver {
 		if (base instanceof MapAdaptable) {
 			context.setPropertyResolved(true);
 			Object obj = adapt(base).get(property);
-			return (obj != null) ? obj.getClass() : null;
+			return obj != null ? obj.getClass() : null;
 		}
 
 		return null;

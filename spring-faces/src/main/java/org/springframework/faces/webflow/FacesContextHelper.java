@@ -31,7 +31,7 @@ import jakarta.faces.lifecycle.Lifecycle;
  */
 public class FacesContextHelper {
 
-	private boolean release = false;
+	private boolean release;
 
 	/**
 	 * Returns a faces context that can be used outside of Web Flow. The context must be {@link #releaseIfNecessary()

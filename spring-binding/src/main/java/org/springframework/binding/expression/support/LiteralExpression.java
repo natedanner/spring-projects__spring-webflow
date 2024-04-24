@@ -24,7 +24,7 @@ public class LiteralExpression implements Expression {
 	/**
 	 * The string literal.
 	 */
-	private String literal;
+	private final String literal;
 
 	/**
 	 * Create a literal expression for the given literal.

@@ -27,11 +27,11 @@ import org.springframework.binding.convert.converters.TwoWayConverter;
  */
 class TwoWayCapableConversionExecutor implements ConversionExecutor {
 
-	private Class<?> sourceClass;
+	private final Class<?> sourceClass;
 
-	private Class<?> targetClass;
+	private final Class<?> targetClass;
 
-	private TwoWayConverter converter;
+	private final TwoWayConverter converter;
 
 	/**
 	 * Creates a new two way conversion executor.

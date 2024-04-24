@@ -35,7 +35,7 @@ import org.springframework.webflow.test.MockRequestContext;
 
 public class WebFlowSpringELExpressionParserTests {
 
-	private ExpressionParser parser = new WebFlowSpringELExpressionParser(new SpelExpressionParser());
+	private final ExpressionParser parser = new WebFlowSpringELExpressionParser(new SpelExpressionParser());
 
 	private MockRequestContext requestContext;
 

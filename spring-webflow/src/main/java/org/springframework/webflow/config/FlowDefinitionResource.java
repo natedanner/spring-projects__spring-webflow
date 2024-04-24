@@ -29,11 +29,11 @@ import org.springframework.webflow.core.collection.AttributeMap;
  */
 public class FlowDefinitionResource {
 
-	private String id;
+	private final String id;
 
-	private Resource path;
+	private final Resource path;
 
-	private AttributeMap<Object> attributes;
+	private final AttributeMap<Object> attributes;
 
 	/**
 	 * Creates a new flow definition resource

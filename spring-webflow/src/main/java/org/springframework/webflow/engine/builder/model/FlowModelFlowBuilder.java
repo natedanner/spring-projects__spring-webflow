@@ -553,7 +553,7 @@ public class FlowModelFlowBuilder extends AbstractFlowBuilder {
 
 	private void parseAndSetMappingRequired(AbstractMappingModel mappingModel, DefaultMapping mapping) {
 		if (StringUtils.hasText(mappingModel.getRequired())) {
-			boolean required = ((Boolean) fromStringTo(Boolean.class).execute(mappingModel.getRequired()));
+			boolean required = (Boolean) fromStringTo(Boolean.class).execute(mappingModel.getRequired());
 			mapping.setRequired(required);
 		}
 	}
@@ -566,7 +566,7 @@ public class FlowModelFlowBuilder extends AbstractFlowBuilder {
 		}
 		boolean popup = false;
 		if (StringUtils.hasText(state.getPopup())) {
-			popup = ((Boolean) fromStringTo(Boolean.class).execute(state.getPopup()));
+			popup = (Boolean) fromStringTo(Boolean.class).execute(state.getPopup());
 		}
 		MutableAttributeMap<Object> attributes = parseMetaAttributes(state.getAttributes());
 		if (state.getModel() != null) {
@@ -677,7 +677,7 @@ public class FlowModelFlowBuilder extends AbstractFlowBuilder {
 			for (BindingModel bindingModel : bindings) {
 				boolean required = false;
 				if (StringUtils.hasText(bindingModel.getRequired())) {
-					required = ((Boolean) fromStringTo(Boolean.class).execute(bindingModel.getRequired()));
+					required = (Boolean) fromStringTo(Boolean.class).execute(bindingModel.getRequired());
 				}
 				Binding binding = new Binding(bindingModel.getProperty(), bindingModel.getConverter(), required);
 				binderConfiguration.addBinding(binding);

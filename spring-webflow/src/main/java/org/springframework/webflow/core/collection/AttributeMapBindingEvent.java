@@ -26,9 +26,9 @@ import java.util.EventObject;
  */
 public class AttributeMapBindingEvent extends EventObject {
 
-	private String attributeName;
+	private final String attributeName;
 
-	private Object attributeValue;
+	private final Object attributeValue;
 
 	/**
 	 * Creates an event for map binding that contains information about the event.

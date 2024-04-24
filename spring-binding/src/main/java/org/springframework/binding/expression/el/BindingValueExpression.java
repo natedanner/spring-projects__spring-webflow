@@ -21,13 +21,13 @@ import org.springframework.util.Assert;
  */
 class BindingValueExpression extends ValueExpression {
 
-	private ValueExpression targetExpression;
+	private final ValueExpression targetExpression;
 
-	private Class<?> expectedType;
+	private final Class<?> expectedType;
 
-	private ConversionService conversionService;
+	private final ConversionService conversionService;
 
-	private boolean template;
+	private final boolean template;
 
 	public BindingValueExpression(ValueExpression targetExpression, Class<?> expectedType,
 			ConversionService conversionService, boolean template) {

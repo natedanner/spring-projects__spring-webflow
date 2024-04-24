@@ -25,9 +25,9 @@ import org.springframework.binding.mapping.Mapping;
  */
 public class TypeConversionError extends AbstractMappingResult {
 
-	private Object originalValue;
+	private final Object originalValue;
 
-	private Exception cause;
+	private final Exception cause;
 
 	/**
 	 * Creates a new type conversion error.

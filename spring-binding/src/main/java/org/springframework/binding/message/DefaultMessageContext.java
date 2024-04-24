@@ -45,7 +45,7 @@ public class DefaultMessageContext implements StateManageableMessageContext {
 
 	@SuppressWarnings("serial")
 	private Map<Object, List<Message>> sourceMessages =
-			new AbstractCachingMapDecorator<Object, List<Message>>(new LinkedHashMap<>()) {
+			new AbstractCachingMapDecorator<>(new LinkedHashMap<>()) {
 
 				protected List<Message> create(Object source) {
 					return new ArrayList<>();

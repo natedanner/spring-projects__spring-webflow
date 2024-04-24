@@ -167,7 +167,7 @@ public class SecurityFlowExecutionListenerTests {
 	}
 
 	private Authentication getAuthentication() {
-		List<GrantedAuthority> authorities = Arrays.<GrantedAuthority> asList(new SimpleGrantedAuthority("ROLE_1"),
+		List<GrantedAuthority> authorities = Arrays. asList(new SimpleGrantedAuthority("ROLE_1"),
 				new SimpleGrantedAuthority("ROLE_2"), new SimpleGrantedAuthority("ROLE_3"));
 		return new UsernamePasswordAuthenticationToken("test", "", authorities);
 	}

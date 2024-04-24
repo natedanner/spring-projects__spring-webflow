@@ -61,7 +61,7 @@ public abstract class StringKeyedMapAdapter<V> implements Map<String, V> {
 	}
 
 	public Set<Entry<String, V>> entrySet() {
-		return (entrySet != null) ? entrySet : (entrySet = new EntrySet());
+		return entrySet != null ? entrySet : (entrySet = new EntrySet());
 	}
 
 	public V get(Object key) {
@@ -73,11 +73,11 @@ public abstract class StringKeyedMapAdapter<V> implements Map<String, V> {
 	}
 
 	public Set<String> keySet() {
-		return (keySet != null) ? keySet : (keySet = new KeySet());
+		return keySet != null ? keySet : (keySet = new KeySet());
 	}
 
 	public V put(String key, V value) {
-		String stringKey = String.valueOf(key);
+		String stringKey = key;
 		V previousValue = getAttribute(stringKey);
 		setAttribute(stringKey, value);
 		return previousValue;
@@ -106,7 +106,7 @@ public abstract class StringKeyedMapAdapter<V> implements Map<String, V> {
 	}
 
 	public Collection<V> values() {
-		return (values != null) ? values : (values = new Values());
+		return values != null ? values : (values = new Values());
 	}
 
 	// hook methods

@@ -24,9 +24,9 @@ import org.springframework.binding.convert.converters.Converter;
  */
 class NoOpConverter implements Converter {
 
-	private Class<?> sourceClass;
+	private final Class<?> sourceClass;
 
-	private Class<?> targetClass;
+	private final Class<?> targetClass;
 
 	/**
 	 * Create a "no op" converter from given source to given target class.

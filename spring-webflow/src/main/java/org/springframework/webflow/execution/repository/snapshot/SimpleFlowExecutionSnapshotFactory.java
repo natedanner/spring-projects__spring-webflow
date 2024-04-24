@@ -37,9 +37,9 @@ import org.springframework.webflow.execution.repository.FlowExecutionRestoration
  */
 public class SimpleFlowExecutionSnapshotFactory implements FlowExecutionSnapshotFactory {
 
-	private FlowExecutionFactory flowExecutionFactory;
+	private final FlowExecutionFactory flowExecutionFactory;
 
-	private FlowDefinitionLocator flowDefinitionLocator;
+	private final FlowDefinitionLocator flowDefinitionLocator;
 
 	/**
 	 * Creates a new simple flow execution snapshot factory

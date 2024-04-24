@@ -76,7 +76,7 @@ public class SpringELExpressionParser implements ExpressionParser {
 
 		Assert.hasText(expression, "The expression string to parse is required and must not be empty");
 
-		context = (context == null) ? NullParserContext.INSTANCE : context;
+		context = context == null ? NullParserContext.INSTANCE : context;
 		Map<String, Expression> expressionVars = parseSpelExpressionVariables(context.getExpressionVariables());
 
 		org.springframework.expression.Expression spelExpression = parseSpelExpression(expression, context);

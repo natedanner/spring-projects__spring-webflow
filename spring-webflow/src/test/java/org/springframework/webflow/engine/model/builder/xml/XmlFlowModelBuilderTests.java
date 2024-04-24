@@ -334,7 +334,7 @@ public class XmlFlowModelBuilderTests {
 		FlowExecutionImplFactory factory = new FlowExecutionImplFactory();
 		factory.setExecutionListenerLoader(new StaticFlowExecutionListenerLoader(new FlowExecutionListener() {
 			public void viewRendering(RequestContext context, View view, StateDefinition viewState) {
-				if (context.getCurrentEvent() != null && context.getCurrentEvent().getId().equals("submit")) {
+				if (context.getCurrentEvent() != null && "submit".equals(context.getCurrentEvent().getId())) {
 					BindingResult result = (BindingResult) context.getFlashScope().get(
 							"org.springframework.validation.BindingResult.formBean");
 					assertEquals(1, result.getErrorCount());
@@ -342,7 +342,7 @@ public class XmlFlowModelBuilderTests {
 			}
 
 			public void viewRendered(RequestContext context, View view, StateDefinition viewState) {
-				if (context.getCurrentEvent() != null && context.getCurrentEvent().getId().equals("submit")) {
+				if (context.getCurrentEvent() != null && "submit".equals(context.getCurrentEvent().getId())) {
 					BindingResult result = (BindingResult) context.getFlashScope().get(
 							"org.springframework.validation.BindingResult.formBean");
 					assertNull(result);

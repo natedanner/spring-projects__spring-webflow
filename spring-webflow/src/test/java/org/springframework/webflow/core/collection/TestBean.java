@@ -22,7 +22,7 @@ import java.io.Serializable;
  */
 public class TestBean implements Serializable {
 
-	private int amount = 0;
+	private int amount;
 
 	public int getAmount() {
 		return amount;

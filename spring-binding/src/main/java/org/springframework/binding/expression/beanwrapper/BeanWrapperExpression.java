@@ -46,11 +46,11 @@ import org.springframework.binding.expression.ValueCoercionException;
  */
 public class BeanWrapperExpression implements Expression {
 
-	private String expression;
+	private final String expression;
 
-	private ConversionService conversionService;
+	private final ConversionService conversionService;
 
-	private boolean autoGrowNestedPaths = false;
+	private boolean autoGrowNestedPaths;
 
 	private int autoGrowCollectionLimit = Integer.MAX_VALUE;
 

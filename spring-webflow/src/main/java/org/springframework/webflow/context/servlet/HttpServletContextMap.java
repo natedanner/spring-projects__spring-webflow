@@ -33,7 +33,7 @@ public class HttpServletContextMap extends StringKeyedMapAdapter<Object> impleme
 	/**
 	 * The wrapped servlet context.
 	 */
-	private ServletContext context;
+	private final ServletContext context;
 
 	/**
 	 * Create a map wrapping given servlet context.

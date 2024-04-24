@@ -33,7 +33,7 @@ public class DefaultTransitionCriteria implements TransitionCriteria {
 	/**
 	 * The expression evaluator to use.
 	 */
-	private Expression expression;
+	private final Expression expression;
 
 	/**
 	 * Create a new expression based transition criteria object.

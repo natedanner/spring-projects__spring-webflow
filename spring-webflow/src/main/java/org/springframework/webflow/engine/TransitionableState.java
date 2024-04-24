@@ -35,12 +35,12 @@ public abstract class TransitionableState extends State implements Transitionabl
 	/**
 	 * The set of possible transitions out of this state.
 	 */
-	private TransitionSet transitions = new TransitionSet();
+	private final TransitionSet transitions = new TransitionSet();
 
 	/**
 	 * An actions to execute when exiting this state.
 	 */
-	private ActionList exitActionList = new ActionList();
+	private final ActionList exitActionList = new ActionList();
 
 	/**
 	 * Create a new transitionable state.

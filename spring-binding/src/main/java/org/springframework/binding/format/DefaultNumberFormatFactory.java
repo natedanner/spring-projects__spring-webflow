@@ -34,7 +34,7 @@ import org.apache.commons.logging.LogFactory;
  */
 public class DefaultNumberFormatFactory extends AbstractNumberFormatFactory {
 
-	private static Log logger = LogFactory.getLog(DefaultNumberFormatFactory.class);
+	private static final Log logger = LogFactory.getLog(DefaultNumberFormatFactory.class);
 
 	private String pattern;
 

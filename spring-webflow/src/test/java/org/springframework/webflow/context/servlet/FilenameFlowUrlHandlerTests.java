@@ -22,8 +22,8 @@ import org.springframework.mock.web.MockHttpServletRequest;
 
 public class FilenameFlowUrlHandlerTests {
 
-	private DefaultFlowUrlHandler urlHandler = new FilenameFlowUrlHandler();
-	private MockHttpServletRequest request = new MockHttpServletRequest();
+	private final DefaultFlowUrlHandler urlHandler = new FilenameFlowUrlHandler();
+	private final MockHttpServletRequest request = new MockHttpServletRequest();
 
 	@Test
 	public void testGetFlowId() {

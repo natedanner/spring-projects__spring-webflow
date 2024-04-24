@@ -27,7 +27,7 @@ import org.springframework.webflow.execution.RequestContext;
  */
 public class ExternalRedirectAction extends AbstractAction {
 
-	private Expression resourceUri;
+	private final Expression resourceUri;
 
 	/**
 	 * Creates a new external redirect action

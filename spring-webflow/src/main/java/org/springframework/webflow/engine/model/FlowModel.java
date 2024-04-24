@@ -82,11 +82,7 @@ public class FlowModel extends AbstractModel {
 	}
 
 	public boolean isMergeableWith(Model model) {
-		if ((model instanceof FlowModel)) {
-			return true;
-		} else {
-			return false;
-		}
+		return model instanceof FlowModel;
 	}
 
 	public void merge(Model model) {

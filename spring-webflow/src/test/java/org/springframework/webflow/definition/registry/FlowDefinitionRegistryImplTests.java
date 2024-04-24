@@ -33,7 +33,7 @@ import org.springframework.webflow.definition.StateDefinition;
  */
 public class FlowDefinitionRegistryImplTests {
 
-	private FlowDefinitionRegistryImpl registry = new FlowDefinitionRegistryImpl();
+	private final FlowDefinitionRegistryImpl registry = new FlowDefinitionRegistryImpl();
 
 	private FooFlow fooFlow;
 

@@ -30,11 +30,11 @@ import org.springframework.util.StringUtils;
  */
 public class Message implements Serializable {
 
-	private Object source;
+	private final Object source;
 
-	private String text;
+	private final String text;
 
-	private Severity severity;
+	private final Severity severity;
 
 	/**
 	 * Creates a new message.

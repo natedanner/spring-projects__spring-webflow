@@ -130,7 +130,7 @@ public class FlowFacesContext extends FacesContextWrapper {
 
 	public boolean getRenderResponse() {
 		Boolean renderResponse = this.context.getFlashScope().getBoolean(RENDER_RESPONSE_KEY);
-		return (renderResponse != null && renderResponse);
+		return renderResponse != null && renderResponse;
 	}
 
 	public boolean getResponseComplete() {
@@ -272,7 +272,7 @@ public class FlowFacesContext extends FacesContextWrapper {
 
 	@Override
 	public boolean isPostback() {
-		return (this.viewRootHolderFromFlashScope || super.isPostback());
+		return this.viewRootHolderFromFlashScope || super.isPostback();
 	}
 
 	public static FlowFacesContext newInstance(RequestContext context, Lifecycle lifecycle) {
@@ -360,7 +360,7 @@ public class FlowFacesContext extends FacesContextWrapper {
 			if (this.facesMessage.getSeverity() != null) {
 				severity = FACES_SEVERITY_TO_SPRING.get(this.facesMessage.getSeverity());
 			}
-			return (severity == null ? Severity.INFO : severity);
+			return severity == null ? Severity.INFO : severity;
 		}
 
 		public String toString() {

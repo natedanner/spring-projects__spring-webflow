@@ -58,7 +58,7 @@ public class FormObjectAccessor {
 	/**
 	 * The wrapped request context.
 	 */
-	private RequestContext context;
+	private final RequestContext context;
 
 	/**
 	 * Creates a form object accessor that wraps the given context.

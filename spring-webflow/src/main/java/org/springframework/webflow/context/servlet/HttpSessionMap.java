@@ -37,7 +37,7 @@ public class HttpSessionMap extends StringKeyedMapAdapter<Object> implements Sha
 	/**
 	 * The wrapped HTTP request, providing access to the session.
 	 */
-	private HttpServletRequest request;
+	private final HttpServletRequest request;
 
 	/**
 	 * Create a map wrapping the session of given request.
@@ -89,8 +89,8 @@ public class HttpSessionMap extends StringKeyedMapAdapter<Object> implements Sha
 
 	protected Iterator<String> getAttributeNames() {
 		HttpSession session = getSession();
-		return (session == null) ?
-				CollectionUtils.<String>emptyIterator() : CollectionUtils.toIterator(session.getAttributeNames());
+		return session == null ?
+				CollectionUtils.emptyIterator() : CollectionUtils.toIterator(session.getAttributeNames());
 	}
 
 	public Object getMutex() {

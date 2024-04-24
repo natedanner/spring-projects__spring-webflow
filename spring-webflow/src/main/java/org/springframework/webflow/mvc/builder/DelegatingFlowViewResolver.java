@@ -32,7 +32,7 @@ import org.springframework.webflow.mvc.view.FlowViewResolver;
  */
 public class DelegatingFlowViewResolver implements FlowViewResolver {
 
-	private List<ViewResolver> viewResolvers;
+	private final List<ViewResolver> viewResolvers;
 
 	/**
 	 * Creates a new flow view resolver.

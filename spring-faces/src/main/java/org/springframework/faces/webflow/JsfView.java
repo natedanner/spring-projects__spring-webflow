@@ -123,8 +123,8 @@ public class JsfView implements View {
 		facesContext.setViewRoot(this.viewRoot);
 		ViewDeclarationLanguage viewDeclarationLanguage = facesContext.getApplication().getViewHandler()
 				.getViewDeclarationLanguage(facesContext, this.viewId);
-		StateManagementStrategy stateManagementStrategy = (viewDeclarationLanguage == null ? null
-				: viewDeclarationLanguage.getStateManagementStrategy(facesContext, this.viewId));
+		StateManagementStrategy stateManagementStrategy = viewDeclarationLanguage == null ? null
+				: viewDeclarationLanguage.getStateManagementStrategy(facesContext, this.viewId);
 		if (stateManagementStrategy != null) {
 			stateManagementStrategy.saveView(facesContext);
 		}

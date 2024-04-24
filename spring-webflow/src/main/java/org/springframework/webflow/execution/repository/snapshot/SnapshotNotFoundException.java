@@ -28,7 +28,7 @@ import org.springframework.webflow.execution.repository.FlowExecutionRepositoryE
  */
 public class SnapshotNotFoundException extends FlowExecutionRepositoryException {
 
-	private Serializable snapshotId;
+	private final Serializable snapshotId;
 
 	/**
 	 * Creates a snapshot not found exception.

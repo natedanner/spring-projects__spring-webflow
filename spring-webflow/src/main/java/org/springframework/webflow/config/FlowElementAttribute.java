@@ -27,17 +27,17 @@ class FlowElementAttribute {
 	/**
 	 * The name of the attribute.
 	 */
-	private String name;
+	private final String name;
 
 	/**
 	 * The value of the attribute before type-conversion.
 	 */
-	private String value;
+	private final String value;
 
 	/**
 	 * The attribute type, optional, but necessary for type conversion.
 	 */
-	private String type;
+	private final String type;
 
 	public FlowElementAttribute(String name, String value, String type) {
 		Assert.hasText(name, "The name is required");

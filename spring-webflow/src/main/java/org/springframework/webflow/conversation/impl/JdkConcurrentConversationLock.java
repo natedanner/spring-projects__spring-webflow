@@ -29,9 +29,9 @@ import org.springframework.webflow.conversation.ConversationLockException;
  */
 public class JdkConcurrentConversationLock implements ConversationLock {
 
-	private Lock lock = new ReentrantLock();
+	private final Lock lock = new ReentrantLock();
 
-	private int timeoutSeconds;
+	private final int timeoutSeconds;
 
 	public JdkConcurrentConversationLock(int timeoutSeconds) {
 		this.timeoutSeconds = timeoutSeconds;

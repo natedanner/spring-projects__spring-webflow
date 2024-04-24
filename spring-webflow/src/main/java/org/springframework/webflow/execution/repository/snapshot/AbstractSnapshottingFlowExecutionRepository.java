@@ -36,7 +36,7 @@ public abstract class AbstractSnapshottingFlowExecutionRepository extends Abstra
 	/**
 	 * The factory to use to take flow execution snapshots.
 	 */
-	private FlowExecutionSnapshotFactory snapshotFactory;
+	private final FlowExecutionSnapshotFactory snapshotFactory;
 
 	/**
 	 * Creates a new snapshotting flow execution repository.

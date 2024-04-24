@@ -35,7 +35,7 @@ public class JsfFlowHandlerAdapter extends FlowHandlerAdapter {
 
 	public void afterPropertiesSet() throws Exception {
 
-		boolean isAjaxHandlerConfigured = (getAjaxHandler() != null);
+		boolean isAjaxHandlerConfigured = getAjaxHandler() != null;
 		super.afterPropertiesSet();
 
 		if (!isAjaxHandlerConfigured) {

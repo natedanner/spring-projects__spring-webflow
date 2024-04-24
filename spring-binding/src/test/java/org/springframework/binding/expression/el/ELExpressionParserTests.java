@@ -21,7 +21,7 @@ import static org.junit.jupiter.api.Assertions.fail;
 
 public class ELExpressionParserTests {
 
-	private ELExpressionParser parser = new ELExpressionParser(new ExpressionFactoryImpl());
+	private final ELExpressionParser parser = new ELExpressionParser(new ExpressionFactoryImpl());
 
 	@BeforeEach
 	public void setUp() {

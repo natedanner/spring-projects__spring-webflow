@@ -22,7 +22,7 @@ import org.springframework.webflow.core.AnnotatedObject;
 
 public class AnnotatedObjectTests {
 
-	private AnnotatedObject object = new Flow("foo");
+	private final AnnotatedObject object = new Flow("foo");
 
 	@Test
 	public void testSetCaption() {

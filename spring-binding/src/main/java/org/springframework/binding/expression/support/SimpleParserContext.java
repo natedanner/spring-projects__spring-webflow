@@ -31,7 +31,7 @@ import org.springframework.binding.expression.ParserContext;
  */
 public final class SimpleParserContext implements ParserContext {
 
-	private Class<?> evaluationContextType;
+	private final Class<?> evaluationContextType;
 
 
 	public SimpleParserContext(Class<?> evaluationContextType) {

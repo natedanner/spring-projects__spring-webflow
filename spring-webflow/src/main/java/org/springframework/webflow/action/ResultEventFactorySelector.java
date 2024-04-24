@@ -29,13 +29,13 @@ public class ResultEventFactorySelector {
 	/**
 	 * The event factory instance for mapping a return value to a success event.
 	 */
-	private SuccessEventFactory successEventFactory = new SuccessEventFactory();
+	private final SuccessEventFactory successEventFactory = new SuccessEventFactory();
 
 	/**
 	 * The event factory instance for mapping a result object to an event, using the type of the result object as the
 	 * mapping criteria.
 	 */
-	private ResultObjectBasedEventFactory resultObjectBasedEventFactory = new ResultObjectBasedEventFactory();
+	private final ResultObjectBasedEventFactory resultObjectBasedEventFactory = new ResultObjectBasedEventFactory();
 
 	/**
 	 * Select the appropriate result event factory for attempts to invoke the given method.

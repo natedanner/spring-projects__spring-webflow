@@ -25,7 +25,7 @@ import org.springframework.webflow.execution.ViewFactory;
  */
 public class ViewFactoryActionAdapter extends AbstractAction {
 
-	private ViewFactory viewFactory;
+	private final ViewFactory viewFactory;
 
 	/**
 	 * Creates a new view factory action adapter

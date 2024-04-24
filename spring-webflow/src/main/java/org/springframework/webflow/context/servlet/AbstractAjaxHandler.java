@@ -9,7 +9,7 @@ import org.springframework.web.context.support.WebApplicationObjectSupport;
 
 public abstract class AbstractAjaxHandler extends WebApplicationObjectSupport implements AjaxHandler {
 
-	private AbstractAjaxHandler delegate;
+	private final AbstractAjaxHandler delegate;
 
 	public AbstractAjaxHandler(AbstractAjaxHandler delegate) {
 		this.delegate = delegate;

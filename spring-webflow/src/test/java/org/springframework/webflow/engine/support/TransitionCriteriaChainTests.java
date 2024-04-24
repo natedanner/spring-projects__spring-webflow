@@ -93,7 +93,7 @@ public class TransitionCriteriaChainTests {
 
 	private static class TestTransitionCriteria implements TransitionCriteria {
 
-		public boolean tested = false;
+		public boolean tested;
 		private boolean result;
 
 		public TestTransitionCriteria(boolean result) {

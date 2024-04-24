@@ -56,7 +56,7 @@ public class JsfManagedBeanPropertyAccessor implements PropertyAccessor {
 	}
 
 	public boolean canRead(EvaluationContext context, Object target, String name) {
-		return (getJsfManagedBean(name) != null);
+		return getJsfManagedBean(name) != null;
 	}
 
 	public TypedValue read(EvaluationContext context, Object target, String name) {
@@ -64,7 +64,7 @@ public class JsfManagedBeanPropertyAccessor implements PropertyAccessor {
 	}
 
 	public boolean canWrite(EvaluationContext context, Object target, String name) {
-		return (getScopeForBean(name) != null);
+		return getScopeForBean(name) != null;
 	}
 
 	public void write(EvaluationContext context, Object target, String name, Object newValue) {

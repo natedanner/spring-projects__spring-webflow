@@ -39,15 +39,15 @@ import org.springframework.webflow.validation.ValidationHintResolver;
  */
 public class FlowBuilderContextImpl implements FlowBuilderContext {
 
-	private String flowId;
+	private final String flowId;
 
 	private AttributeMap<Object> flowAttributes;
 
-	private FlowDefinitionLocator flowDefinitionLocator;
+	private final FlowDefinitionLocator flowDefinitionLocator;
 
-	private FlowBuilderServices flowBuilderServices;
+	private final FlowBuilderServices flowBuilderServices;
 
-	private ConversionService conversionService;
+	private final ConversionService conversionService;
 
 	/**
 	 * Creates a new flow builder context.

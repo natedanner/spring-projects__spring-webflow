@@ -33,7 +33,7 @@ import org.springframework.util.StringUtils;
  */
 public class StringToDate extends StringToObject {
 
-	private static Log logger = LogFactory.getLog(StringToDate.class);
+	private static final Log logger = LogFactory.getLog(StringToDate.class);
 
 	/**
 	 * The default date pattern.

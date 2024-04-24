@@ -27,11 +27,11 @@ import jakarta.el.VariableMapper;
  */
 public class DefaultELContext extends ELContext {
 
-	private VariableMapper variableMapper;
+	private final VariableMapper variableMapper;
 
-	private ELResolver resolver;
+	private final ELResolver resolver;
 
-	private FunctionMapper functionMapper;
+	private final FunctionMapper functionMapper;
 
 	/**
 	 * Creates a new default el context.

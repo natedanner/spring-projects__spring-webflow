@@ -37,7 +37,7 @@ class ConversationBackedFlowExecutionLock implements FlowExecutionLock {
 	/**
 	 * The conversation to lock.
 	 */
-	private Conversation conversation;
+	private final Conversation conversation;
 
 	/**
 	 * Creates a new conversation-backed flow execution lock.

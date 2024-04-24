@@ -56,7 +56,7 @@ public abstract class AbstractFlowExecutionRepository implements FlowExecutionRe
 	 */
 	protected final Log logger = LogFactory.getLog(getClass());
 
-	private ConversationManager conversationManager;
+	private final ConversationManager conversationManager;
 
 	private boolean alwaysGenerateNewNextKey = true;
 
@@ -200,8 +200,7 @@ public abstract class AbstractFlowExecutionRepository implements FlowExecutionRe
 
 	private Conversation beginConversation(FlowExecution execution) {
 		ConversationParameters parameters = createConversationParameters(execution);
-		Conversation conversation = conversationManager.beginConversation(parameters);
-		return conversation;
+		return conversationManager.beginConversation(parameters);
 	}
 
 	private ConversationId parseExecutionId(String encodedId, String encodedKey)

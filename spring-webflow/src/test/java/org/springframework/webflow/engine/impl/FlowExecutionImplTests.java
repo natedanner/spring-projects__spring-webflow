@@ -189,7 +189,7 @@ public class FlowExecutionImplTests {
 			assertNull(e.getStateId());
 			assertTrue(e.getCause() instanceof IllegalStateException);
 			e.printStackTrace();
-			assertTrue(e.getCause().getMessage().equals("Oops"));
+			assertTrue("Oops".equals(e.getCause().getMessage()));
 		}
 	}
 

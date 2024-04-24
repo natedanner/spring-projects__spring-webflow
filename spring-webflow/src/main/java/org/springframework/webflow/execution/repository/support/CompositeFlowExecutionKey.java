@@ -38,9 +38,9 @@ public class CompositeFlowExecutionKey extends FlowExecutionKey {
 
 	private static final String FORMAT = EXECUTION_ID_PREFIX + "<executionId>" + SNAPSHOT_ID_PREFIX + "<snapshotId>";
 
-	private Serializable executionId;
+	private final Serializable executionId;
 
-	private Serializable snapshotId;
+	private final Serializable snapshotId;
 
 	/**
 	 * Create a new composite flow execution key given the composing parts.
@@ -81,8 +81,7 @@ public class CompositeFlowExecutionKey extends FlowExecutionKey {
 	}
 
 	public String toString() {
-		return new StringBuilder().append(EXECUTION_ID_PREFIX).append(executionId).append(SNAPSHOT_ID_PREFIX)
-				.append(snapshotId).toString();
+		return EXECUTION_ID_PREFIX + executionId + SNAPSHOT_ID_PREFIX + snapshotId;
 	}
 
 	// static helpers

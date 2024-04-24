@@ -47,7 +47,7 @@ import org.springframework.webflow.execution.RequestContextHolder;
  */
 public class FlowVariablePropertyAccessor implements PropertyAccessor {
 
-	private static Map<String, FlowVariableAccessor> variables = new HashMap<>();
+	private static final Map<String, FlowVariableAccessor> variables = new HashMap<>();
 
 	static {
 		variables.put("currentUser", () ->

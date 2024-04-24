@@ -28,7 +28,7 @@ import org.springframework.core.NamedThreadLocal;
  * 
  * @author Jeremy Grelle
  */
-public class RequestContextHolder {
+public final class RequestContextHolder {
 
 	private static final ThreadLocal<RequestContext> requestContextHolder = new NamedThreadLocal<>(
 			"Flow RequestContext");

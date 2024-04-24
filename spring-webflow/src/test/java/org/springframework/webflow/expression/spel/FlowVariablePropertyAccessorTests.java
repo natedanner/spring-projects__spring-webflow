@@ -31,7 +31,7 @@ import org.springframework.webflow.test.MockRequestContext;
 
 public class FlowVariablePropertyAccessorTests {
 
-	private FlowVariablePropertyAccessor accessor = new FlowVariablePropertyAccessor();
+	private final FlowVariablePropertyAccessor accessor = new FlowVariablePropertyAccessor();
 
 	private MockRequestContext requestContext;
 

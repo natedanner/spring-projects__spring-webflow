@@ -32,7 +32,7 @@ import org.springframework.util.Assert;
  */
 public class SpringBindingConverterAdapter implements GenericConverter {
 
-	private Converter converter;
+	private final Converter converter;
 
 	public SpringBindingConverterAdapter(Converter converter) {
 		Assert.notNull(converter, "A Spring Binding converter is required.");

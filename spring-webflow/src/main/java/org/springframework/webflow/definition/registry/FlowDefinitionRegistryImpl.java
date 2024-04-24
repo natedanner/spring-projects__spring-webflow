@@ -37,7 +37,7 @@ public class FlowDefinitionRegistryImpl implements FlowDefinitionRegistry {
 	/**
 	 * The map of loaded Flow definitions maintained in this registry.
 	 */
-	private Map<String, FlowDefinitionHolder> flowDefinitions;
+	private final Map<String, FlowDefinitionHolder> flowDefinitions;
 
 	/**
 	 * An optional parent flow definition registry.

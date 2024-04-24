@@ -95,7 +95,7 @@ public class ViewStateModel extends AbstractTransitionableStateModel {
 			}
 			sb.append(parent);
 		}
-		return (sb.length() > 0) ? sb.toString() : null;
+		return sb.length() > 0 ? sb.toString() : null;
 	}
 
 	public Model createCopy() {

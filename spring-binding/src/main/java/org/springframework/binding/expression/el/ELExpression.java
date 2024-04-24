@@ -32,9 +32,9 @@ import org.springframework.util.Assert;
  */
 public class ELExpression implements Expression {
 
-	private ELContextFactory elContextFactory;
+	private final ELContextFactory elContextFactory;
 
-	private ValueExpression valueExpression;
+	private final ValueExpression valueExpression;
 
 	/**
 	 * Creates a new el expression
@@ -53,7 +53,7 @@ public class ELExpression implements Expression {
 		try {
 			Object result = valueExpression.getValue(ctx);
 			if (result == null && !ctx.isPropertyResolved()) {
-				if (getExpressionString().equals("null")) {
+				if ("null".equals(getExpressionString())) {
 					// special case for handling reserved null keyword
 					return null;
 				} else {

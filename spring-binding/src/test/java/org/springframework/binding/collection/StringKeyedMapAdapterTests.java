@@ -34,9 +34,9 @@ import org.junit.jupiter.api.Test;
  */
 public class StringKeyedMapAdapterTests {
 
-	private Map<String, String> contents = new HashMap<>();
+	private final Map<String, String> contents = new HashMap<>();
 
-	private StringKeyedMapAdapter<String> map = new StringKeyedMapAdapter<String>() {
+	private final StringKeyedMapAdapter<String> map = new StringKeyedMapAdapter<>() {
 
 		protected String getAttribute(String key) {
 			return contents.get(key);

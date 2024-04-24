@@ -77,9 +77,9 @@ public class JpaFlowExecutionListener implements FlowExecutionListener {
 	/** The name of the attribute the flow {@link EntityManager persistence context} is indexed under.d */
 	public static final String PERSISTENCE_CONTEXT_ATTRIBUTE = "persistenceContext";
 
-	private EntityManagerFactory entityManagerFactory;
+	private final EntityManagerFactory entityManagerFactory;
 
-	private TransactionTemplate transactionTemplate;
+	private final TransactionTemplate transactionTemplate;
 
 	/**
 	 * Create a new JPA flow execution listener using given JPA Entity Manager factory.
@@ -162,7 +162,7 @@ public class JpaFlowExecutionListener implements FlowExecutionListener {
 	}
 
 	private boolean isParentPersistenceContext(FlowSession flowSession) {
-		return ((!flowSession.isRoot()) && isPersistenceContext(flowSession.getParent().getDefinition()));
+		return (!flowSession.isRoot()) && isPersistenceContext(flowSession.getParent().getDefinition());
 	}
 
 	private EntityManager getEntityManager(FlowSession session) {

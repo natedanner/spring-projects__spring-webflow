@@ -383,7 +383,7 @@ public class FlowHandlerAdapter extends WebContentGenerator implements HandlerAd
 		if (ajaxHandler.isAjaxRequest(request, response)) {
 			ajaxHandler.sendAjaxRedirect(url, request, response, false);
 		} else {
-			String encodedRedirectURL = (isRemoteHost(url) ? url : response.encodeRedirectURL(url));
+			String encodedRedirectURL = isRemoteHost(url) ? url : response.encodeRedirectURL(url);
 			if (redirectHttp10Compatible) {
 				if (statusCode != null) {
 					response.setStatus(statusCode.value());
@@ -395,7 +395,7 @@ public class FlowHandlerAdapter extends WebContentGenerator implements HandlerAd
 				}
 			}
 			else {
-				int code = (statusCode != null) ? statusCode.value() : 303;
+				int code = statusCode != null ? statusCode.value() : 303;
 				response.setStatus(code);
 				response.setHeader("Location", response.encodeRedirectURL(url));
 			}
@@ -528,7 +528,7 @@ public class FlowHandlerAdapter extends WebContentGenerator implements HandlerAd
 	 * is not null. Also see SWF-1385.
 	 */
 	private boolean isRedirectServletRelative(HttpServletRequest request) {
-		return (request.getPathInfo() != null);
+		return request.getPathInfo() != null;
 	}
 
 	private void sendContextRelativeRedirect(String location, HttpServletRequest request, HttpServletResponse response,
@@ -556,7 +556,7 @@ public class FlowHandlerAdapter extends WebContentGenerator implements HandlerAd
 			FlowExecutionResult result) throws IOException {
 
 		if (this.saveOutputToFlashScopeOnRedirect) {
-			saveFlashOutput(url.toString(), request, response, result);
+			saveFlashOutput(url, request, response, result);
 		}
 		sendRedirect(url, request, response);
 	}

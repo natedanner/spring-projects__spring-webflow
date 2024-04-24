@@ -50,7 +50,7 @@ import org.springframework.webflow.test.MockFlowExecutionKey;
  */
 public class FlowExecutionImplFactoryTests {
 
-	private FlowExecutionImplFactory factory = new FlowExecutionImplFactory();
+	private final FlowExecutionImplFactory factory = new FlowExecutionImplFactory();
 
 	private Flow flowDefinition;
 
@@ -201,7 +201,7 @@ public class FlowExecutionImplFactoryTests {
 			if (flowId.equals(child.getId())) {
 				return child;
 			} else {
-				throw new IllegalArgumentException(flowId.toString());
+				throw new IllegalArgumentException(flowId);
 			}
 		}
 	}

@@ -35,7 +35,7 @@ public class BeanWrapperExpressionParser extends AbstractExpressionParser {
 
 	private ConversionService conversionService;
 
-	private boolean autoGrowNestedPaths = false;
+	private boolean autoGrowNestedPaths;
 
 	private int autoGrowCollectionLimit = Integer.MAX_VALUE;
 

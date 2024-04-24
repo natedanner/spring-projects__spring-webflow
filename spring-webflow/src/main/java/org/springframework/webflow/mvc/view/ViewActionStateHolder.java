@@ -29,11 +29,11 @@ public class ViewActionStateHolder implements Serializable {
 
 	public static final String KEY = "webflowViewActionStateHolder";
 
-	private String eventId;
+	private final String eventId;
 
-	private boolean userEventProcessed;
+	private final boolean userEventProcessed;
 
-	private transient MappingResults mappingResults;
+	private final transient MappingResults mappingResults;
 
 	public ViewActionStateHolder(String eventId, boolean userEventProcessed, MappingResults mappingResults) {
 		this.eventId = eventId;

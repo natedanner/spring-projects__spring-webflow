@@ -104,7 +104,7 @@ public class JsfFinalResponseActionTests {
 
 	private static class TestLifecycle extends FlowLifecycle {
 
-		boolean executed = false;
+		boolean executed;
 
 		public TestLifecycle(Lifecycle delegate) {
 			super(delegate);
@@ -142,7 +142,7 @@ public class JsfFinalResponseActionTests {
 	}
 
 	private static class NoRenderViewHandler extends MockViewHandler {
-		boolean rendered = false;
+		boolean rendered;
 
 		public void renderView(FacesContext context, UIViewRoot viewToRender) throws FacesException {
 			this.rendered = true;

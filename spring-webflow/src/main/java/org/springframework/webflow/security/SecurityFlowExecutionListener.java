@@ -100,8 +100,8 @@ public class SecurityFlowExecutionListener implements FlowExecutionListener {
 		if (accessDecisionManager != null) {
 			accessDecisionManager.decide(authentication, object, configAttributes);
 		} else {
-			AccessDecisionManager manager = (SPRING_SECURITY_3_PRESENT ?
-					createManagerWithSpringSecurity3(rule) : createManager(rule));
+			AccessDecisionManager manager = SPRING_SECURITY_3_PRESENT ?
+					createManagerWithSpringSecurity3(rule) : createManager(rule);
 			manager.decide(authentication, object, configAttributes);
 		}
 	}

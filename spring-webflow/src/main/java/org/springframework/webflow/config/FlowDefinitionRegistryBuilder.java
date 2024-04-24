@@ -312,7 +312,7 @@ public class FlowDefinitionRegistryBuilder {
 		public FlowLocation(String path, String id, Map<String, Object> attributes) {
 			this.path = path;
 			this.id = id;
-			this.attributes = (attributes != null) ?
+			this.attributes = attributes != null ?
 					new LocalAttributeMap<>(attributes) :
 					new LocalAttributeMap<>(new HashMap<>());
 		}
@@ -341,7 +341,7 @@ public class FlowDefinitionRegistryBuilder {
 		public FlowBuilderInfo(FlowBuilder builder, String id, Map<String, Object> attributes) {
 			this.builder = builder;
 			this.id = id;
-			this.attributes = (attributes != null) ?
+			this.attributes = attributes != null ?
 					new LocalAttributeMap<>(attributes) :
 					new LocalAttributeMap<>(new HashMap<>());
 		}

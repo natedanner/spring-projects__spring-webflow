@@ -37,7 +37,7 @@ import org.junit.jupiter.api.Test;
  */
 public class LocalAttributeMapTests {
 
-	private LocalAttributeMap<Object> attributeMap = new LocalAttributeMap<>();
+	private final LocalAttributeMap<Object> attributeMap = new LocalAttributeMap<>();
 
 	@BeforeEach
 	public void setUp() {

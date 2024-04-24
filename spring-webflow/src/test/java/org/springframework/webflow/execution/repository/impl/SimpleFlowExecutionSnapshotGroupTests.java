@@ -12,17 +12,17 @@ import org.springframework.webflow.execution.repository.snapshot.SnapshotNotFoun
 
 public class SimpleFlowExecutionSnapshotGroupTests {
 
-	private SimpleFlowExecutionSnapshotGroup group = new SimpleFlowExecutionSnapshotGroup();
+	private final SimpleFlowExecutionSnapshotGroup group = new SimpleFlowExecutionSnapshotGroup();
 
-	private FlowExecutionSnapshot snapshot = new FlowExecutionSnapshot() {
-
-	};
-
-	private FlowExecutionSnapshot snapshot2 = new FlowExecutionSnapshot() {
+	private final FlowExecutionSnapshot snapshot = new FlowExecutionSnapshot() {
 
 	};
 
-	private FlowExecutionSnapshot snapshot3 = new FlowExecutionSnapshot() {
+	private final FlowExecutionSnapshot snapshot2 = new FlowExecutionSnapshot() {
+
+	};
+
+	private final FlowExecutionSnapshot snapshot3 = new FlowExecutionSnapshot() {
 
 	};
 

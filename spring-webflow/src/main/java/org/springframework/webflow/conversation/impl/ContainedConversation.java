@@ -41,9 +41,9 @@ public class ContainedConversation implements Conversation, Serializable {
 
 	private ConversationId id;
 
-	private ConversationLock lock;
+	private final ConversationLock lock;
 
-	private Map<Object, Object> attributes;
+	private final Map<Object, Object> attributes;
 
 	/**
 	 * Create a new contained conversation.

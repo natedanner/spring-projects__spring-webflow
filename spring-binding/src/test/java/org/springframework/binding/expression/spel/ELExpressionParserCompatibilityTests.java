@@ -46,7 +46,7 @@ import org.springframework.expression.spel.standard.SpelExpressionParser;
  */
 public class ELExpressionParserCompatibilityTests {
 
-	private SpringELExpressionParser parser = new SpringELExpressionParser(new SpelExpressionParser());
+	private final SpringELExpressionParser parser = new SpringELExpressionParser(new SpelExpressionParser());
 
 	@BeforeEach
 	public void setUp() {

@@ -25,7 +25,7 @@ public class InvalidMethodKeyException extends RuntimeException {
 	/**
 	 * The method key that could not be resolved.
 	 */
-	private MethodKey methodKey;
+	private final MethodKey methodKey;
 
 	/**
 	 * Creates an exception signaling an invalid method signature.

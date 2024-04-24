@@ -46,7 +46,7 @@ import org.springframework.util.Assert;
 @SuppressWarnings("serial")
 public abstract class AbstractCachingMapDecorator<K, V> implements Map<K, V>, Serializable {
 
-	private static Object NULL_VALUE = new Object();
+	private static Object nullValue = new Object();
 
 
 	private final Map<K, Object> targetMap;
@@ -70,7 +70,7 @@ public abstract class AbstractCachingMapDecorator<K, V> implements Map<K, V>, Se
 	 * @param weak whether to use weak references for keys and values
 	 */
 	public AbstractCachingMapDecorator(boolean weak) {
-		Map<K, Object> internalMap = (weak ? new WeakHashMap<>() : new HashMap<>());
+		Map<K, Object> internalMap = weak ? new WeakHashMap<>() : new HashMap<>();
 		this.targetMap = Collections.synchronizedMap(internalMap);
 		this.synchronize = true;
 		this.weak = weak;
@@ -129,7 +129,7 @@ public abstract class AbstractCachingMapDecorator<K, V> implements Map<K, V>, Se
 	}
 
 	public boolean containsValue(Object value) {
-		Object valueToCheck = (value != null ? value : NULL_VALUE);
+		Object valueToCheck = value != null ? value : nullValue;
 		if (this.synchronize) {
 			synchronized (this.targetMap) {
 				return containsValueOrReference(valueToCheck);
@@ -162,7 +162,7 @@ public abstract class AbstractCachingMapDecorator<K, V> implements Map<K, V>, Se
 		if (returnValue instanceof Reference) {
 			returnValue = ((Reference) returnValue).get();
 		}
-		return (returnValue == NULL_VALUE ? null : (V) returnValue);
+		return returnValue == nullValue ? null : (V) returnValue;
 	}
 
 	public void putAll(Map<? extends K, ? extends V> map) {
@@ -207,7 +207,7 @@ public abstract class AbstractCachingMapDecorator<K, V> implements Map<K, V>, Se
 					continue;
 				}
 			}
-			values.add(value == NULL_VALUE ? null : (V) value);
+			values.add(value == nullValue ? null : (V) value);
 		}
 		return values;
 	}
@@ -236,7 +236,7 @@ public abstract class AbstractCachingMapDecorator<K, V> implements Map<K, V>, Se
 					continue;
 				}
 			}
-			entries.put(entry.getKey(), value == NULL_VALUE ? null : (V) value);
+			entries.put(entry.getKey(), value == nullValue ? null : (V) value);
 		}
 		return entries.entrySet();
 	}
@@ -250,7 +250,7 @@ public abstract class AbstractCachingMapDecorator<K, V> implements Map<K, V>, Se
 	public V put(K key, V value) {
 		Object newValue = value;
 		if (value == null) {
-			newValue = NULL_VALUE;
+			newValue = nullValue;
 		}
 		else if (useWeakValue(key, value)) {
 			newValue = new WeakReference<>(newValue);
@@ -290,7 +290,7 @@ public abstract class AbstractCachingMapDecorator<K, V> implements Map<K, V>, Se
 			put((K) key, newValue);
 			return newValue;
 		}
-		return (value == NULL_VALUE ? null : (V) value);
+		return value == nullValue ? null : (V) value;
 	}
 
 	/**

@@ -31,12 +31,12 @@ public class BeanFactoryVariableValueFactory implements VariableValueFactory {
 	/**
 	 * The class of variable value. Typically a Java bean.
 	 */
-	private Class<?> type;
+	private final Class<?> type;
 
 	/**
 	 * The backing bean factory that will create and restore variable instances.
 	 */
-	private AutowireCapableBeanFactory beanFactory;
+	private final AutowireCapableBeanFactory beanFactory;
 
 	/**
 	 * Creates a new bean factory variable factory.

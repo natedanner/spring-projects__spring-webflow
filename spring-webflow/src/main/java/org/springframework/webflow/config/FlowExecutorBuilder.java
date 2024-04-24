@@ -186,7 +186,7 @@ public class FlowExecutorBuilder {
 		FlowExecutionSnapshotFactory snapshotFactory = getSnapshotFactory(executionFactory);
 		DefaultFlowExecutionRepository repository = new DefaultFlowExecutionRepository(manager, snapshotFactory);
 		if (this.maxFlowExecutionSnapshots != null) {
-			repository.setMaxSnapshots((this.maxFlowExecutionSnapshots == 0) ? 1 : this.maxFlowExecutionSnapshots);
+			repository.setMaxSnapshots(this.maxFlowExecutionSnapshots == 0 ? 1 : this.maxFlowExecutionSnapshots);
 		}
 		return repository;
 	}

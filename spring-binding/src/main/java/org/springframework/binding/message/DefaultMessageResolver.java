@@ -23,15 +23,15 @@ import org.springframework.core.style.ToStringCreator;
 
 public class DefaultMessageResolver implements MessageResolver, MessageSourceResolvable {
 
-	private Object source;
+	private final Object source;
 
-	private String[] codes;
+	private final String[] codes;
 
-	private Severity severity;
+	private final Severity severity;
 
-	private Object[] args;
+	private final Object[] args;
 
-	private String defaultText;
+	private final String defaultText;
 
 	public DefaultMessageResolver(Object source, String[] codes, Severity severity, Object[] args, String defaultText) {
 		this.source = source;

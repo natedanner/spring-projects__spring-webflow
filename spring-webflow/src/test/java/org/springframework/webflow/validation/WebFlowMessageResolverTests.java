@@ -5,7 +5,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.Test;
 
 public class WebFlowMessageResolverTests {
-	private WebFlowMessageCodesResolver messageCodesResolver = new WebFlowMessageCodesResolver();
+	private final WebFlowMessageCodesResolver messageCodesResolver = new WebFlowMessageCodesResolver();
 
 	@Test
 	public void testResolveObjectMessageCodes() {

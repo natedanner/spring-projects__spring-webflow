@@ -34,7 +34,7 @@ public class ScopeSearchingPropertyAccessor implements PropertyAccessor {
 	}
 
 	public boolean canRead(EvaluationContext context, Object target, String name) {
-		return (findScopeForAttribute((RequestContext) target, name) != null);
+		return findScopeForAttribute((RequestContext) target, name) != null;
 	}
 
 	public TypedValue read(EvaluationContext context, Object target, String name) {
@@ -43,7 +43,7 @@ public class ScopeSearchingPropertyAccessor implements PropertyAccessor {
 	}
 
 	public boolean canWrite(EvaluationContext context, Object target, String name) {
-		return (findScopeForAttribute((RequestContext) target, name) != null);
+		return findScopeForAttribute((RequestContext) target, name) != null;
 	}
 
 	public void write(EvaluationContext context, Object target, String name, Object newValue) {

@@ -27,7 +27,7 @@ public class GeneratedFlowExecutionKey extends FlowExecutionKey {
 
 	private static int nextKey = 1;
 
-	private int value;
+	private final int value;
 
 	/**
 	 * Creates a new mock flow execution key.

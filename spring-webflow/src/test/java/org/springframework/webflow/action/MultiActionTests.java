@@ -32,9 +32,9 @@ import org.springframework.webflow.test.MockRequestContext;
  */
 public class MultiActionTests {
 
-	private TestMultiAction action = new TestMultiAction();
+	private final TestMultiAction action = new TestMultiAction();
 
-	private MockRequestContext context = new MockRequestContext();
+	private final MockRequestContext context = new MockRequestContext();
 
 	@Test
 	public void testDispatchWithMethodSignature() throws Exception {

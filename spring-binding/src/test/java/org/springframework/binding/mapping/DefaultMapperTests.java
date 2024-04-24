@@ -16,8 +16,8 @@ import org.springframework.binding.mapping.impl.DefaultMapping;
 import org.springframework.expression.spel.standard.SpelExpressionParser;
 
 public class DefaultMapperTests {
-	private DefaultMapper mapper = new DefaultMapper();
-	private ExpressionParser parser = new SpringELExpressionParser(new SpelExpressionParser());
+	private final DefaultMapper mapper = new DefaultMapper();
+	private final ExpressionParser parser = new SpringELExpressionParser(new SpelExpressionParser());
 
 	@Test
 	public void testMapping() {
@@ -39,7 +39,7 @@ public class DefaultMapperTests {
 		assertEquals("a", bean2.bar);
 		assertEquals("a", bean2.baz);
 		assertEquals(1, results.getResults(result -> {
-			if (result.getMapping().getTargetExpression().getExpressionString().equals("baz")) {
+			if ("baz".equals(result.getMapping().getTargetExpression().getExpressionString())) {
 				return true;
 			} else {
 				return false;

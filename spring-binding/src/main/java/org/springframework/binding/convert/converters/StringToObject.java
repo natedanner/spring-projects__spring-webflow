@@ -17,7 +17,7 @@ package org.springframework.binding.convert.converters;
 
 public abstract class StringToObject implements TwoWayConverter {
 
-	private Class<?> objectClass;
+	private final Class<?> objectClass;
 
 	public StringToObject(Class<?> objectClass) {
 		this.objectClass = objectClass;

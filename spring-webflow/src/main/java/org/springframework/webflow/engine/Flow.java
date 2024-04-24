@@ -118,12 +118,12 @@ public class Flow extends AnnotatedObject implements FlowDefinition {
 	/**
 	 * An assigned flow identifier uniquely identifying this flow among all other flows.
 	 */
-	private String id;
+	private final String id;
 
 	/**
 	 * The set of state definitions for this flow.
 	 */
-	private Set<State> states = new LinkedHashSet<>(9);
+	private final Set<State> states = new LinkedHashSet<>(9);
 
 	/**
 	 * The default start state for this flow.
@@ -133,7 +133,7 @@ public class Flow extends AnnotatedObject implements FlowDefinition {
 	/**
 	 * The set of flow variables created by this flow.
 	 */
-	private Map<String, FlowVariable> variables = new LinkedHashMap<>();
+	private final Map<String, FlowVariable> variables = new LinkedHashMap<>();
 
 	/**
 	 * The mapper to map flow input attributes.
@@ -146,17 +146,17 @@ public class Flow extends AnnotatedObject implements FlowDefinition {
 	 * Start actions should execute with care as during startup a flow session has not yet fully initialized and some
 	 * properties like its "currentState" have not yet been set.
 	 */
-	private ActionList startActionList = new ActionList();
+	private final ActionList startActionList = new ActionList();
 
 	/**
 	 * The set of global transitions that are shared by all states of this flow.
 	 */
-	private TransitionSet globalTransitionSet = new TransitionSet();
+	private final TransitionSet globalTransitionSet = new TransitionSet();
 
 	/**
 	 * The list of actions to execute when this flow ends.
 	 */
-	private ActionList endActionList = new ActionList();
+	private final ActionList endActionList = new ActionList();
 
 	/**
 	 * The mapper to map flow output attributes.
@@ -166,7 +166,7 @@ public class Flow extends AnnotatedObject implements FlowDefinition {
 	/**
 	 * The set of exception handlers for this flow.
 	 */
-	private FlowExecutionExceptionHandlerSet exceptionHandlerSet = new FlowExecutionExceptionHandlerSet();
+	private final FlowExecutionExceptionHandlerSet exceptionHandlerSet = new FlowExecutionExceptionHandlerSet();
 
 	/**
 	 * An optional application context hosting services needed by this flow.

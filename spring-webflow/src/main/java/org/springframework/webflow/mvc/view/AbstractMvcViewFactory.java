@@ -34,25 +34,25 @@ import org.springframework.webflow.validation.ValidationHintResolver;
  */
 public abstract class AbstractMvcViewFactory implements ViewFactory {
 
-	private Expression viewId;
+	private final Expression viewId;
 
-	private FlowViewResolver viewResolver;
+	private final FlowViewResolver viewResolver;
 
-	private ExpressionParser expressionParser;
+	private final ExpressionParser expressionParser;
 
-	private ConversionService conversionService;
+	private final ConversionService conversionService;
 
 	private Validator validator;
 
 	private ValidationHintResolver validationHintResolver;
 
-	private BinderConfiguration binderConfiguration;
+	private final BinderConfiguration binderConfiguration;
 
 	private String eventIdParameterName;
 
 	private String fieldMarkerPrefix;
 
-	private MessageCodesResolver messageCodesResolver;
+	private final MessageCodesResolver messageCodesResolver;
 
 	/**
 	 * Creates a new MVC view factory.

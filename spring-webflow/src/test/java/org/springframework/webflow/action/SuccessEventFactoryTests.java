@@ -26,9 +26,9 @@ import org.springframework.webflow.test.MockRequestContext;
  */
 public class SuccessEventFactoryTests {
 
-	private MockRequestContext context = new MockRequestContext();
+	private final MockRequestContext context = new MockRequestContext();
 
-	private SuccessEventFactory factory = new SuccessEventFactory();
+	private final SuccessEventFactory factory = new SuccessEventFactory();
 
 	@Test
 	public void testDefaultAdaptionRules() {

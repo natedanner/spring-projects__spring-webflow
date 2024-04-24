@@ -29,11 +29,11 @@ import org.springframework.binding.mapping.MappingResultsCriteria;
  */
 public class DefaultMappingResults implements MappingResults {
 
-	private transient Object source;
+	private final transient Object source;
 
-	private transient Object target;
+	private final transient Object target;
 
-	private List<MappingResult> mappingResults;
+	private final List<MappingResult> mappingResults;
 
 	/**
 	 * Creates a new mapping results object.

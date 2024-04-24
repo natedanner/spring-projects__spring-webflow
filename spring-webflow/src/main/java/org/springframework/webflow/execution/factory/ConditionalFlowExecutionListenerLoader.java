@@ -43,7 +43,7 @@ public class ConditionalFlowExecutionListenerLoader implements FlowExecutionList
 	 * The list of flow execution listeners containing {@link ConditionalFlowExecutionListenerHolder} objects. The list
 	 * determines the conditions in which a single flow execution listener applies.
 	 */
-	private List<ConditionalFlowExecutionListenerHolder> listeners = new LinkedList<>();
+	private final List<ConditionalFlowExecutionListenerHolder> listeners = new LinkedList<>();
 
 	/**
 	 * Add a listener that will listen to executions to flows matching the specified criteria.

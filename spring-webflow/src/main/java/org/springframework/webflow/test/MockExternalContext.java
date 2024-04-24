@@ -462,7 +462,7 @@ public class MockExternalContext implements ExternalContext {
 				|| getExternalRedirectRequested();
 	}
 
-	private class MockPrincipal implements Principal {
+	private final class MockPrincipal implements Principal {
 		private String name;
 
 		private MockPrincipal(String name) {

@@ -23,9 +23,9 @@ package org.springframework.binding.convert;
  */
 public class ConversionExecutorNotFoundException extends ConversionException {
 
-	private Class<?> sourceClass;
+	private final Class<?> sourceClass;
 
-	private Class<?> targetClass;
+	private final Class<?> targetClass;
 
 	/**
 	 * Creates a new conversion executor not found exception.

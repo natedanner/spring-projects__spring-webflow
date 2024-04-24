@@ -174,7 +174,7 @@ public class ImplicitFlowVariableELResolver extends ELResolver {
 		}
 	}
 
-	private static abstract class PropertyResolver {
+	private abstract static class PropertyResolver {
 
 		private static final BeanELResolver elPropertyResolver = new BeanELResolver();
 

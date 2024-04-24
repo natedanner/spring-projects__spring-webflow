@@ -22,13 +22,13 @@ import org.springframework.webflow.execution.FlowExecutionOutcome;
  * 
  * @author Keith Donald
  */
-public class FlowExecutionResult {
+public final class FlowExecutionResult {
 
-	private String flowId;
+	private final String flowId;
 
-	private String flowExecutionKey;
+	private final String flowExecutionKey;
 
-	private FlowExecutionOutcome outcome;
+	private final FlowExecutionOutcome outcome;
 
 	private FlowExecutionResult(String flowId, String flowExecutionKey, FlowExecutionOutcome outcome) {
 		this.flowId = flowId;

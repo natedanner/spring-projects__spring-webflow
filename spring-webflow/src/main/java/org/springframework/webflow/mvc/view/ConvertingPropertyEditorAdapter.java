@@ -34,13 +34,13 @@ import org.springframework.util.StringUtils;
  */
 class ConvertingPropertyEditorAdapter extends PropertyEditorSupport {
 
-	private ConversionService conversionService;
+	private final ConversionService conversionService;
 
-	private TypeDescriptor fieldType;
+	private final TypeDescriptor fieldType;
 
-	private String converterId;
+	private final String converterId;
 
-	private boolean canConvertToString;
+	private final boolean canConvertToString;
 
 	public ConvertingPropertyEditorAdapter(ConversionService conversionService, String converterId,
 			TypeDescriptor fieldType) {

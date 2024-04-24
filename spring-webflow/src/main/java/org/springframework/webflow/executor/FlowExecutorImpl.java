@@ -78,17 +78,17 @@ public class FlowExecutorImpl implements FlowExecutor {
 	/**
 	 * The locator to access flow definitions registered in a central registry.
 	 */
-	private FlowDefinitionLocator definitionLocator;
+	private final FlowDefinitionLocator definitionLocator;
 
 	/**
 	 * The abstract factory for creating a new execution of a flow definition.
 	 */
-	private FlowExecutionFactory executionFactory;
+	private final FlowExecutionFactory executionFactory;
 
 	/**
 	 * The repository used to save, update, and load existing flow executions to/from a persistent store.
 	 */
-	private FlowExecutionRepository executionRepository;
+	private final FlowExecutionRepository executionRepository;
 
 	/**
 	 * Create a new flow executor.

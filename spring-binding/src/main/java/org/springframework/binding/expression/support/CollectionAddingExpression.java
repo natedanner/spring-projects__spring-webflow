@@ -32,7 +32,7 @@ public class CollectionAddingExpression implements Expression {
 	/**
 	 * The expression that resolves a mutable collection reference.
 	 */
-	private Expression collectionExpression;
+	private final Expression collectionExpression;
 
 	/**
 	 * Creates a collection adding property expression.

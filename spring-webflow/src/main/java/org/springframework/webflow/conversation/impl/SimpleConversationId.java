@@ -30,7 +30,7 @@ public class SimpleConversationId extends ConversationId {
 	/**
 	 * The id value.
 	 */
-	private Serializable id;
+	private final Serializable id;
 
 	/**
 	 * Creates a new simple conversation id.

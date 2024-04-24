@@ -43,22 +43,21 @@ public class OptionalDependenciesPlugin implements Plugin<Project> {
 	@Override
 	public void apply(Project project) {
 		Configuration optional = project.getConfigurations().create("optional");
-		project.getPlugins().withType(JavaPlugin.class, (javaPlugin) -> {
+		project.getPlugins().withType(JavaPlugin.class, javaPlugin -> {
 			SourceSetContainer sourceSets = project.getConvention()
 					.getPlugin(JavaPluginConvention.class).getSourceSets();
-			sourceSets.all((sourceSet) -> {
+			sourceSets.all(sourceSet -> {
 				sourceSet.setCompileClasspath(
 						sourceSet.getCompileClasspath().plus(optional));
 				sourceSet.setRuntimeClasspath(
 						sourceSet.getRuntimeClasspath().plus(optional));
 			});
 		});
-		project.getPlugins().withType(EclipsePlugin.class, (eclipePlugin) -> {
+		project.getPlugins().withType(EclipsePlugin.class, eclipePlugin ->
 			project.getExtensions().getByType(EclipseModel.class)
-					.classpath((classpath) -> {
+					.classpath(classpath -> {
 						classpath.getPlusConfigurations().add(optional);
-					});
-		});
+					}));
 	}
 
 }

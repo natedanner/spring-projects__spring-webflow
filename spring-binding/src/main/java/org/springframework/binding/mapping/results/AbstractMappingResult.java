@@ -26,7 +26,7 @@ import org.springframework.core.style.ToStringCreator;
  */
 public abstract class AbstractMappingResult implements MappingResult {
 
-	private transient Mapping mapping;
+	private final transient Mapping mapping;
 
 
 	/**

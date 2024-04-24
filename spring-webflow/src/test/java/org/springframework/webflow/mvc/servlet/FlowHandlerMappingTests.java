@@ -23,7 +23,7 @@ import org.springframework.webflow.definition.registry.FlowDefinitionRegistryImp
 import org.springframework.webflow.execution.FlowExecutionOutcome;
 
 public class FlowHandlerMappingTests {
-	private FlowHandlerMapping mapping = new FlowHandlerMapping();
+	private final FlowHandlerMapping mapping = new FlowHandlerMapping();
 
 	@BeforeEach
 	public void setUp() {

@@ -26,7 +26,7 @@ import org.springframework.webflow.test.MockRequestContext;
 import org.springframework.webflow.test.MockRequestControlContext;
 
 public class WebFlowELExpressionParserTests {
-	private WebFlowELExpressionParser parser = new WebFlowELExpressionParser(new ExpressionFactoryImpl());
+	private final WebFlowELExpressionParser parser = new WebFlowELExpressionParser(new ExpressionFactoryImpl());
 
 	@Test
 	public void testResolveMap() {

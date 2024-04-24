@@ -49,7 +49,7 @@ public class JsfUtils {
 
 	public static void notifyAfterListeners(PhaseId phaseId, Lifecycle lifecycle, FacesContext context) {
 		PhaseEvent afterPhaseEvent = new PhaseEvent(context, phaseId, lifecycle);
-		for (int i = (lifecycle.getPhaseListeners().length - 1); i >= 0; i--) {
+		for (int i = lifecycle.getPhaseListeners().length - 1; i >= 0; i--) {
 			PhaseListener listener = lifecycle.getPhaseListeners()[i];
 			if (listener.getPhaseId() == phaseId || listener.getPhaseId() == PhaseId.ANY_PHASE) {
 				listener.afterPhase(afterPhaseEvent);
@@ -68,11 +68,11 @@ public class JsfUtils {
 	}
 
 	public static boolean isFlowRequest() {
-		return (RequestContextHolder.getRequestContext() != null);
+		return RequestContextHolder.getRequestContext() != null;
 	}
 
 	public static boolean isAsynchronousFlowRequest() {
-		return (isFlowRequest() && RequestContextHolder.getRequestContext().getExternalContext().isAjaxRequest());
+		return isFlowRequest() && RequestContextHolder.getRequestContext().getExternalContext().isAjaxRequest();
 	}
 
 	/**

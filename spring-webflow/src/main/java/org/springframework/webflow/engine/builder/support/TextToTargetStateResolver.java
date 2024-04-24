@@ -45,7 +45,7 @@ class TextToTargetStateResolver implements Converter {
 	/**
 	 * Context for flow builder services.
 	 */
-	private FlowBuilderContext flowBuilderContext;
+	private final FlowBuilderContext flowBuilderContext;
 
 	/**
 	 * Create a new converter that converts strings to transition target state resolver objects. The given conversion

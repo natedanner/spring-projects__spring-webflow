@@ -25,7 +25,7 @@ import org.springframework.webflow.execution.FlowExecutionKey;
  */
 public class MockFlowExecutionKey extends FlowExecutionKey {
 
-	private String value;
+	private final String value;
 
 	/**
 	 * Creates a new mock flow execution key.

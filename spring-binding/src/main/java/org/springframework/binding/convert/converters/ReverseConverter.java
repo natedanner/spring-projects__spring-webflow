@@ -24,7 +24,7 @@ package org.springframework.binding.convert.converters;
  */
 public class ReverseConverter implements Converter {
 
-	private TwoWayConverter converter;
+	private final TwoWayConverter converter;
 
 	public ReverseConverter(TwoWayConverter converter) {
 		this.converter = converter;

@@ -23,7 +23,7 @@ import java.beans.PropertyEditor;
  */
 public class PropertyEditorConverter extends StringToObject {
 
-	private PropertyEditor propertyEditor;
+	private final PropertyEditor propertyEditor;
 
 	/**
 	 * Creates a new property editor converter.

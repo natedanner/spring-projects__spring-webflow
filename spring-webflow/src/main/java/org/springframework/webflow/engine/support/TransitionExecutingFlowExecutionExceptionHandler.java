@@ -58,12 +58,12 @@ public class TransitionExecutingFlowExecutionExceptionHandler implements FlowExe
 	/**
 	 * The exceptionType to targetStateResolver map.
 	 */
-	private Map<Class<? extends Throwable>, TargetStateResolver> exceptionTargetStateMappings = new HashMap<>();
+	private final Map<Class<? extends Throwable>, TargetStateResolver> exceptionTargetStateMappings = new HashMap<>();
 
 	/**
 	 * The list of actions to execute when this handler handles an exception.
 	 */
-	private ActionList actionList = new ActionList();
+	private final ActionList actionList = new ActionList();
 
 	/**
 	 * Adds an exception-to-target state mapping to this handler.

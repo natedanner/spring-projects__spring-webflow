@@ -34,9 +34,9 @@ import org.springframework.webflow.validation.ValidationHintResolver;
  */
 class LocalFlowBuilderContext implements FlowBuilderContext {
 
-	private FlowBuilderContext parent;
+	private final FlowBuilderContext parent;
 
-	private ApplicationContext localFlowContext;
+	private final ApplicationContext localFlowContext;
 
 	public LocalFlowBuilderContext(FlowBuilderContext parent, GenericApplicationContext localFlowContext) {
 		this.parent = parent;

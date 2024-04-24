@@ -25,7 +25,7 @@ import org.springframework.webflow.execution.FlowExecutionException;
  */
 public class FlowAttributeMappingException extends FlowExecutionException {
 
-	private MappingResults results;
+	private final MappingResults results;
 
 	/**
 	 * Creates a new attrbute mapping exception

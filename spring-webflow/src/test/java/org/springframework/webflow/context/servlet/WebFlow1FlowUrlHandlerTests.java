@@ -10,8 +10,8 @@ import org.springframework.webflow.core.collection.CollectionUtils;
 import org.springframework.webflow.core.collection.LocalAttributeMap;
 
 public class WebFlow1FlowUrlHandlerTests {
-	private WebFlow1FlowUrlHandler urlHandler = new WebFlow1FlowUrlHandler();
-	private MockHttpServletRequest request = new MockHttpServletRequest();
+	private final WebFlow1FlowUrlHandler urlHandler = new WebFlow1FlowUrlHandler();
+	private final MockHttpServletRequest request = new MockHttpServletRequest();
 
 	@Test
 	public void testGetFlowId() {

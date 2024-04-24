@@ -29,17 +29,17 @@ public class ConversationParameters implements Serializable {
 	/**
 	 * The conversation name.
 	 */
-	private String name;
+	private final String name;
 
 	/**
 	 * The conversation caption.
 	 */
-	private String caption;
+	private final String caption;
 
 	/**
 	 * The conversation description.
 	 */
-	private String description;
+	private final String description;
 
 	/**
 	 * Creates new conversation input parameters.

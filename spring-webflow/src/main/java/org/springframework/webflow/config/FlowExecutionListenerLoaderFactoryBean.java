@@ -47,7 +47,7 @@ class FlowExecutionListenerLoaderFactoryBean implements FactoryBean<FlowExecutio
 	/**
 	 * A helper factory for converting string-encoded listener criteria to a FlowExecutionListenerCriteria object.
 	 */
-	private FlowExecutionListenerCriteriaFactory listenerCriteriaFactory = new FlowExecutionListenerCriteriaFactory();
+	private final FlowExecutionListenerCriteriaFactory listenerCriteriaFactory = new FlowExecutionListenerCriteriaFactory();
 
 	/**
 	 * Sets the listeners eligible for loading, and the criteria for when they should be loaded.

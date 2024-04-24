@@ -12,9 +12,9 @@ public class MessageContextErrorsMessageCodesTests {
 
 	private DefaultMessageContext context;
 
-	private String errorCode = "bar";
+	private final String errorCode = "bar";
 
-	private String objectName = "object";
+	private final String objectName = "object";
 
 	private MessageCodesResolver resolver;
 

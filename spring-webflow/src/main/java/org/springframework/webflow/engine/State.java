@@ -67,12 +67,12 @@ public abstract class State extends AnnotatedObject implements StateDefinition {
 	/**
 	 * The list of actions to invoke when this state is entered.
 	 */
-	private ActionList entryActionList = new ActionList();
+	private final ActionList entryActionList = new ActionList();
 
 	/**
 	 * The set of exception handlers for this state.
 	 */
-	private FlowExecutionExceptionHandlerSet exceptionHandlerSet = new FlowExecutionExceptionHandlerSet();
+	private final FlowExecutionExceptionHandlerSet exceptionHandlerSet = new FlowExecutionExceptionHandlerSet();
 
 	/**
 	 * Creates a state for the provided <code>flow</code> identified by the provided <code>id</code>. The id must be

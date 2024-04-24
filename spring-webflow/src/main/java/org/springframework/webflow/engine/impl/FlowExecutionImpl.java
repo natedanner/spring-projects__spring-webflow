@@ -650,7 +650,7 @@ public class FlowExecutionImpl implements FlowExecution, Externalizable {
 	private boolean hasEmbeddedModeAttribute(AttributeMap<?> input) {
 		if (input != null) {
 			String mode = (String) input.get("mode");
-			if (mode != null && mode.trim().toLowerCase().equals("embedded")) {
+			if (mode != null && "embedded".equals(mode.trim().toLowerCase())) {
 				return true;
 			}
 		}

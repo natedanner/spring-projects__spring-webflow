@@ -12,11 +12,11 @@ import org.springframework.webflow.execution.RequestContext;
 
 public class DefaultValidationContext implements ValidationContext {
 
-	private RequestContext requestContext;
+	private final RequestContext requestContext;
 
-	private String eventId;
+	private final String eventId;
 
-	private MappingResults mappingResults;
+	private final MappingResults mappingResults;
 
 	public DefaultValidationContext(RequestContext requestContext, String eventId, MappingResults mappingResults) {
 		this.requestContext = requestContext;
@@ -60,11 +60,7 @@ public class DefaultValidationContext implements ValidationContext {
 		}
 
 		public boolean test(MappingResult result) {
-			if (property.equals(result.getMapping().getTargetExpression().getExpressionString())) {
-				return true;
-			} else {
-				return false;
-			}
+			return property.equals(result.getMapping().getTargetExpression().getExpressionString());
 		}
 	}
 

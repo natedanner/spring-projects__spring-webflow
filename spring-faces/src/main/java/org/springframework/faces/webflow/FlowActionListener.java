@@ -114,7 +114,7 @@ public class FlowActionListener implements ActionListener {
 					if (facesContext.getViewRoot().findComponent(MESSAGES_ID) != null) {
 						fragments.add(MESSAGES_ID);
 					}
-					if (fragments.size() > 0) {
+					if (!fragments.isEmpty()) {
 						String[] fragmentsArray = new String[fragments.size()];
 						for (int i = 0; i < fragments.size(); i++) {
 							fragmentsArray[i] = fragments.get(i);
@@ -171,7 +171,7 @@ public class FlowActionListener implements ActionListener {
 		ValidationHintResolver hintResolver = (ValidationHintResolver) requestContext.getActiveFlow()
 				.getAttributes().get(FlowModelFlowBuilder.VALIDATION_HINT_RESOLVER_FLOW_ATTR);
 
-		return (hintResolver != null ? hintResolver : new BeanValidationHintResolver());
+		return hintResolver != null ? hintResolver : new BeanValidationHintResolver();
 	}
 
 }

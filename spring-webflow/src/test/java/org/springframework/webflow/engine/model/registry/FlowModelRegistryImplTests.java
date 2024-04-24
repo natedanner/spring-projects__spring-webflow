@@ -11,7 +11,7 @@ import org.springframework.webflow.engine.model.FlowModel;
 
 public class FlowModelRegistryImplTests {
 
-	private FlowModelRegistryImpl registry = new FlowModelRegistryImpl();
+	private final FlowModelRegistryImpl registry = new FlowModelRegistryImpl();
 
 	private FlowModel fooFlow;
 

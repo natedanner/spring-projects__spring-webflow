@@ -26,9 +26,9 @@ import org.springframework.util.Assert;
  */
 public class RuntimeBindingConversionExecutor implements ConversionExecutor {
 
-	private Class<?> targetClass;
+	private final Class<?> targetClass;
 
-	private ConversionService conversionService;
+	private final ConversionService conversionService;
 
 	/**
 	 * Creates a new runtime binding conversion executor.

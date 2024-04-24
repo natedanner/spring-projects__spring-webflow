@@ -128,7 +128,7 @@ public class SelectionTrackingActionListenerTests {
 
 	private static class TestDelegateActionListener implements ActionListener {
 
-		public boolean processedEvent = false;
+		public boolean processedEvent;
 
 		public void processAction(ActionEvent event) throws AbortProcessingException {
 			this.processedEvent = true;

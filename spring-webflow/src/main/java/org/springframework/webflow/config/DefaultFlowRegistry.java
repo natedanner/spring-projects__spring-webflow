@@ -26,7 +26,7 @@ import org.springframework.webflow.engine.model.registry.FlowModelRegistryImpl;
  */
 class DefaultFlowRegistry extends FlowDefinitionRegistryImpl {
 
-	private FlowModelRegistry flowModelRegistry = new FlowModelRegistryImpl();
+	private final FlowModelRegistry flowModelRegistry = new FlowModelRegistryImpl();
 
 	public FlowModelRegistry getFlowModelRegistry() {
 		return flowModelRegistry;

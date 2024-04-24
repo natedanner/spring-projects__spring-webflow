@@ -221,7 +221,7 @@ public class JsfViewTests {
 
 	private static class NoEventLifecycle extends FlowLifecycle {
 
-		boolean executed = false;
+		boolean executed;
 
 		public NoEventLifecycle(Lifecycle delegate) {
 			super(delegate);
@@ -236,7 +236,7 @@ public class JsfViewTests {
 	}
 
 	private class EventSignalingLifecycle extends FlowLifecycle {
-		boolean executed = false;
+		boolean executed;
 
 		public EventSignalingLifecycle(Lifecycle delegate) {
 			super(delegate);

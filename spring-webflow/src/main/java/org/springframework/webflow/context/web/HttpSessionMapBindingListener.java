@@ -32,9 +32,9 @@ import org.springframework.webflow.core.collection.LocalAttributeMap;
  */
 public class HttpSessionMapBindingListener implements HttpSessionBindingListener {
 
-	private AttributeMapBindingListener listener;
+	private final AttributeMapBindingListener listener;
 
-	private Map<String, Object> sessionMap;
+	private final Map<String, Object> sessionMap;
 
 	/**
 	 * Create a new wrapper for given listener.

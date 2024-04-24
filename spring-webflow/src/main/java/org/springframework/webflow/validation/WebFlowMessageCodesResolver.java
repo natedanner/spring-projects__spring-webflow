@@ -55,7 +55,7 @@ public class WebFlowMessageCodesResolver implements MessageCodesResolver {
 	 * Default is none. Specify, for example, "validation." to get error codes like "validation.name.typeMismatch".
 	 */
 	public void setPrefix(String prefix) {
-		this.prefix = (prefix != null ? prefix : "");
+		this.prefix = prefix != null ? prefix : "";
 	}
 
 	/**

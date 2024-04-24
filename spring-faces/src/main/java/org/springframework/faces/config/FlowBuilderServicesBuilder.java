@@ -41,7 +41,7 @@ import org.springframework.webflow.validation.ValidationHintResolver;
  */
 public class FlowBuilderServicesBuilder {
 
-	private boolean enableManagedBeans = false;
+	private boolean enableManagedBeans;
 
 	private ConversionService conversionService = new FacesConversionService();
 
@@ -148,9 +148,9 @@ public class FlowBuilderServicesBuilder {
 			return this.expressionParser;
 		}
 		else {
-			return (this.enableManagedBeans ?
+			return this.enableManagedBeans ?
 					new FacesSpringELExpressionParser(new SpelExpressionParser(), this.conversionService) :
-					new WebFlowSpringELExpressionParser(new SpelExpressionParser(), this.conversionService));
+					new WebFlowSpringELExpressionParser(new SpelExpressionParser(), this.conversionService);
 		}
 	}
 

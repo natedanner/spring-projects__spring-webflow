@@ -28,7 +28,7 @@ public class SnapshotCreationException extends FlowExecutionRepositoryException 
 	/**
 	 * The flow execution that could not be snapshotted.
 	 */
-	private FlowExecution flowExecution;
+	private final FlowExecution flowExecution;
 
 	/**
 	 * Creates a new snapshot creation exception.

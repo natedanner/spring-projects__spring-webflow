@@ -26,9 +26,9 @@ import org.springframework.webflow.execution.RequestContext;
  */
 public class ViewVariable extends AnnotatedObject {
 
-	private String name;
+	private final String name;
 
-	private VariableValueFactory valueFactory;
+	private final VariableValueFactory valueFactory;
 
 	/**
 	 * Creates a new view variable.

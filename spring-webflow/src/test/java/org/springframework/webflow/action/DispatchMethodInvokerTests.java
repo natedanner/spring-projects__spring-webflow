@@ -63,7 +63,7 @@ public class DispatchMethodInvokerTests {
 
 	@SuppressWarnings("unused")
 	private class MockClass {
-		private boolean methodCalled = false;
+		private boolean methodCalled;
 
 		public boolean getMethodCalled() {
 			return methodCalled;

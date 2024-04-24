@@ -32,7 +32,7 @@ public class HttpServletRequestMap extends StringKeyedMapAdapter<Object> {
 	/**
 	 * The wrapped HTTP request.
 	 */
-	private HttpServletRequest request;
+	private final HttpServletRequest request;
 
 	/**
 	 * Create a new map wrapping the attributes of given request.

@@ -12,9 +12,9 @@ import org.springframework.context.NoSuchMessageException;
 import org.springframework.context.support.StaticMessageSource;
 
 public class MessageBuilderTests {
-	private StaticMessageSource messageSource = new StaticMessageSource();
-	private Locale locale = Locale.getDefault();
-	private MessageBuilder builder = new MessageBuilder();
+	private final StaticMessageSource messageSource = new StaticMessageSource();
+	private final Locale locale = Locale.getDefault();
+	private final MessageBuilder builder = new MessageBuilder();
 
 	@BeforeEach
 	public void setUp() {

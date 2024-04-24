@@ -23,7 +23,7 @@ import java.io.ObjectStreamException;
  * 
  * @author Keith Donald
  */
-public class NoOpConversationLock implements ConversationLock {
+public final class NoOpConversationLock implements ConversationLock {
 
 	/**
 	 * The singleton instance.

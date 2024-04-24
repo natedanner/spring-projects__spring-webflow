@@ -33,7 +33,7 @@ public class WebFlow1FlowUrlHandler implements FlowUrlHandler {
 
 	private static final String DEFAULT_URL_ENCODING_SCHEME = "UTF-8";
 
-	private String urlEncodingScheme = DEFAULT_URL_ENCODING_SCHEME;
+	private final String urlEncodingScheme = DEFAULT_URL_ENCODING_SCHEME;
 
 	public String getFlowExecutionKey(HttpServletRequest request) {
 		return request.getParameter("_flowExecutionKey");
@@ -88,7 +88,7 @@ public class WebFlow1FlowUrlHandler implements FlowUrlHandler {
 
 	private String urlEncode(String value) {
 		try {
-			return URLEncoder.encode(String.valueOf(value), urlEncodingScheme);
+			return URLEncoder.encode(value, urlEncodingScheme);
 		} catch (UnsupportedEncodingException e) {
 			throw new IllegalArgumentException("Cannot url encode " + value);
 		}

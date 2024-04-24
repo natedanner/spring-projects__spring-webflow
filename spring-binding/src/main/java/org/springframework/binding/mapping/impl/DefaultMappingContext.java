@@ -39,13 +39,13 @@ public class DefaultMappingContext {
 
 	private static final Log logger = LogFactory.getLog(DefaultMapping.class);
 
-	private Object source;
+	private final Object source;
 
-	private Object target;
+	private final Object target;
 
 	private Mapping currentMapping;
 
-	private List<MappingResult> mappingResults;
+	private final List<MappingResult> mappingResults;
 
 	public DefaultMappingContext(Object source, Object target) {
 		this.source = source;

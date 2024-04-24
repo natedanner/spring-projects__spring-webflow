@@ -29,7 +29,7 @@ import org.springframework.webflow.execution.RequestContext;
  */
 public class FlowDefinitionRedirectAction extends AbstractAction {
 
-	private Expression expression;
+	private final Expression expression;
 
 	/**
 	 * Creates a new flow definition redirect action.

@@ -49,7 +49,7 @@ public class DefaultFlowHolder implements FlowDefinitionHolder {
 	/**
 	 * The flow assembler.
 	 */
-	private FlowAssembler assembler;
+	private final FlowAssembler assembler;
 
 	/**
 	 * A flag indicating whether or not this holder is in the middle of the assembly process.

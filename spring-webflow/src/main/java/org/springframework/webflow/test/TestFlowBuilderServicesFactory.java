@@ -11,7 +11,7 @@ import org.springframework.webflow.expression.spel.WebFlowSpringELExpressionPars
  * Factory that encapsulates configuration of default flow builder services for a test environment.
  * @author Keith Donald
  */
-public class TestFlowBuilderServicesFactory {
+public final class TestFlowBuilderServicesFactory {
 	private TestFlowBuilderServicesFactory() {
 	}
 

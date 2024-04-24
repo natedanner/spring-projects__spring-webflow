@@ -51,7 +51,7 @@ public class CompositeAction extends AbstractAction {
 	/**
 	 * The actions to execute.
 	 */
-	private Action[] actions;
+	private final Action[] actions;
 
 	/**
 	 * Should execution stop if one action returns an error event?

@@ -24,7 +24,7 @@ import org.springframework.util.ClassUtils;
  */
 public class StringToClass extends StringToObject {
 
-	private ClassLoader classLoader;
+	private final ClassLoader classLoader;
 
 	public StringToClass(ClassLoader classLoader) {
 		super(Class.class);

@@ -197,9 +197,9 @@ public class JsfViewFactory implements ViewFactory {
 		String name = "jakarta.faces.visit.SKIP_ITERATION";
 		facesContext.getAttributes().put(name, true);
 		try {
-			VisitContext visitContext = (visitHint != null ?
+			VisitContext visitContext = visitHint != null ?
 					VisitContext.createVisitContext(facesContext, null, EnumSet.of(visitHint)) :
-					VisitContext.createVisitContext(facesContext));
+					VisitContext.createVisitContext(facesContext);
 			facesContext.getViewRoot().visitTree(visitContext, new PostRestoreStateEventVisitCallback());
 		}
 		catch (AbortProcessingException e) {

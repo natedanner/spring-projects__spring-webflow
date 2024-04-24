@@ -40,10 +40,10 @@ public class FlowHandlerAdapterTests {
 	private MockHttpServletResponse response;
 	private ServletExternalContext context;
 	private FlowHandler flowHandler;
-	private LocalAttributeMap<Object> flowInput = new LocalAttributeMap<>();
+	private final LocalAttributeMap<Object> flowInput = new LocalAttributeMap<>();
 	private boolean handleException;
 	private boolean handleExecutionOutcome;
-	private MockFlashMapManager flashMapManager = new MockFlashMapManager();
+	private final MockFlashMapManager flashMapManager = new MockFlashMapManager();
 
 	@BeforeEach
 	public void setUp() throws Exception {

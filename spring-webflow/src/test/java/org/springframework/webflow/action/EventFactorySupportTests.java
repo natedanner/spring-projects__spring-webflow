@@ -27,9 +27,9 @@ import org.springframework.webflow.execution.Event;
  */
 public class EventFactorySupportTests {
 
-	private EventFactorySupport support = new EventFactorySupport();
+	private final EventFactorySupport support = new EventFactorySupport();
 
-	private Object source = new Object();
+	private final Object source = new Object();
 
 	@BeforeEach
 	public void setUp() throws Exception {

@@ -27,9 +27,9 @@ import org.springframework.binding.mapping.Mapping;
  */
 public class TargetAccessError extends AbstractMappingResult {
 
-	private Object originalValue;
+	private final Object originalValue;
 
-	private EvaluationException cause;
+	private final EvaluationException cause;
 
 	/**
 	 * Creates a new target access error.

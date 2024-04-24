@@ -45,7 +45,7 @@ public class MethodInvoker {
 	 * A cache of invoked bean methods, keyed weakly.
 	 */
 	@SuppressWarnings("serial")
-	private AbstractCachingMapDecorator<MethodKey, Method> methodCache = new AbstractCachingMapDecorator<MethodKey, Method>(true) {
+	private AbstractCachingMapDecorator<MethodKey, Method> methodCache = new AbstractCachingMapDecorator<>(true) {
 		public Method create(MethodKey key) {
 			return key.getMethod();
 		}

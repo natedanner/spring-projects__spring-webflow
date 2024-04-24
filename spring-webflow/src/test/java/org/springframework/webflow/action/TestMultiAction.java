@@ -25,7 +25,7 @@ import org.springframework.webflow.execution.RequestContext;
  */
 public class TestMultiAction extends MultiAction {
 
-	int counter = 0;
+	int counter;
 
 	public Event increment(RequestContext context) {
 		counter++;

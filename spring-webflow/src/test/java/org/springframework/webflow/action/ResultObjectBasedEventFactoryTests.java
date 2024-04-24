@@ -32,7 +32,7 @@ import org.springframework.webflow.test.MockRequestContext;
  */
 public class ResultObjectBasedEventFactoryTests {
 
-	private ResultObjectBasedEventFactory factory = new ResultObjectBasedEventFactory();
+	private final ResultObjectBasedEventFactory factory = new ResultObjectBasedEventFactory();
 
 	@Test
 	public void testNull() {
@@ -56,7 +56,7 @@ public class ResultObjectBasedEventFactoryTests {
 	}
 
 	public enum MyLabeledEnum {
-		A, B;
+		A, B
 	}
 
 	/*

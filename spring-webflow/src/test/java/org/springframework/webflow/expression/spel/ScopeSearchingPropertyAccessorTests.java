@@ -30,7 +30,7 @@ import static org.junit.jupiter.api.Assertions.assertSame;
 
 public class ScopeSearchingPropertyAccessorTests {
 
-	private ScopeSearchingPropertyAccessor accessor = new ScopeSearchingPropertyAccessor();
+	private final ScopeSearchingPropertyAccessor accessor = new ScopeSearchingPropertyAccessor();
 
 	private MockRequestContext requestContext;
 

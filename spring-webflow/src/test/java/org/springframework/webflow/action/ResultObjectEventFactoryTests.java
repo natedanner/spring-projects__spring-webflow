@@ -29,9 +29,9 @@ import org.springframework.webflow.test.MockRequestContext;
  */
 public class ResultObjectEventFactoryTests {
 
-	private MockRequestContext context = new MockRequestContext();
+	private final MockRequestContext context = new MockRequestContext();
 
-	private ResultObjectBasedEventFactory factory = new ResultObjectBasedEventFactory();
+	private final ResultObjectBasedEventFactory factory = new ResultObjectBasedEventFactory();
 
 	@Test
 	public void testAlreadyAnEvent() {

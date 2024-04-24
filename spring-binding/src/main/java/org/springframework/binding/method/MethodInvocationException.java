@@ -29,12 +29,12 @@ public class MethodInvocationException extends RuntimeException {
 	/**
 	 * The method signature. Transient because a MethodSignature is not Serializable.
 	 */
-	private transient MethodSignature methodSignature;
+	private final transient MethodSignature methodSignature;
 
 	/**
 	 * The method invocation argument values. Transient because we cannot guarantee that the arguments are Serializable.
 	 */
-	private transient Object[] arguments;
+	private final transient Object[] arguments;
 
 	/**
 	 * Signals that the method with the specified signature could not be invoked with the provided arguments.

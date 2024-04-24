@@ -59,17 +59,17 @@ import org.springframework.webflow.engine.builder.BinderConfiguration;
  */
 public class BindingModel extends AbstractErrors implements BindingResult {
 
-	private String objectName;
+	private final String objectName;
 
-	private Object boundObject;
+	private final Object boundObject;
 
-	private ExpressionParser expressionParser;
+	private final ExpressionParser expressionParser;
 
-	private ConversionService conversionService;
+	private final ConversionService conversionService;
 
 	private MappingResults mappingResults;
 
-	private MessageContext messageContext;
+	private final MessageContext messageContext;
 
 	private BinderConfiguration binderConfiguration;
 
@@ -231,8 +231,8 @@ public class BindingModel extends AbstractErrors implements BindingResult {
 			fieldExpression = parseFieldExpression(fieldExpression.getExpressionString(), false);
 		}
 		Object value = fieldExpression.getValue(boundObject);
-		if ((value instanceof String) == false) {
-			if (avoidConversion(valueType) == false) {
+		if (!(value instanceof String)) {
+			if (!avoidConversion(valueType)) {
 				PropertyEditor editor = findSpringConvertingPropertyEditor(field, valueType);
 				if (editor != null) {
 					editor.setValue(value);
@@ -247,18 +247,12 @@ public class BindingModel extends AbstractErrors implements BindingResult {
 		if (binderConfiguration == null) {
 			return false;
 		}
-		return (binderConfiguration.getConverterId(field) != null);
+		return binderConfiguration.getConverterId(field) != null;
 	}
 
 	private boolean avoidConversion(Class<?> valueType) {
-		// special handling for array, collection, map types
-		// necessary as getFieldValue is called by form tags for non-formattable properties, too
-		// TODO - investigate how to improve this in Spring MVC
-		if (valueType == null || valueType.isArray() || Collection.class.isAssignableFrom(valueType)
-				|| Map.class.isAssignableFrom(valueType)) {
-			return true;
-		}
-		return false;
+		return valueType == null || valueType.isArray() || Collection.class.isAssignableFrom(valueType)
+				|| Map.class.isAssignableFrom(valueType);
 	}
 
 	private PropertyEditor findSpringConvertingPropertyEditor(String field, Class<?> valueType) {
@@ -307,11 +301,7 @@ public class BindingModel extends AbstractErrors implements BindingResult {
 		}
 
 		public boolean test(MappingResult result) {
-			if (result.isError() && field.equals(result.getMapping().getTargetExpression().getExpressionString())) {
-				return true;
-			} else {
-				return false;
-			}
+			return result.isError() && field.equals(result.getMapping().getTargetExpression().getExpressionString());
 		}
 	}
 
@@ -355,7 +345,7 @@ public class BindingModel extends AbstractErrors implements BindingResult {
 		T get(String objectName, Message message);
 	}
 
-	private static final ObjectErrorFactory<ObjectError> ALL_ERRORS = new ObjectErrorFactory<ObjectError>() {
+	private static final ObjectErrorFactory<ObjectError> ALL_ERRORS = new ObjectErrorFactory<>() {
 
 		public ObjectError get(String objectName, Message message) {
 			ObjectError error = FIELD_ERRORS.get(objectName, message);

@@ -24,7 +24,7 @@ import org.springframework.binding.mapping.Mapping;
  */
 public class RequiredError extends AbstractMappingResult {
 
-	private Object originalValue;
+	private final Object originalValue;
 
 	/**
 	 * Creates a new required error result

@@ -25,7 +25,7 @@ import org.apache.commons.logging.LogFactory;
  * @author Keith Donald
  * @author Erwin Vervaet
  */
-public class ActionExecutor {
+public final class ActionExecutor {
 
 	private static final Log logger = LogFactory.getLog(ActionExecutor.class);
 

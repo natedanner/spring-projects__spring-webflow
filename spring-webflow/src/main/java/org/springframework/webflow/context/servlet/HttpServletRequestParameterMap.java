@@ -38,7 +38,7 @@ public class HttpServletRequestParameterMap extends StringKeyedMapAdapter<Object
 	/**
 	 * The wrapped HTTP request.
 	 */
-	private HttpServletRequest request;
+	private final HttpServletRequest request;
 
 	/**
 	 * Create a new map wrapping the parameters of given request.
@@ -52,7 +52,7 @@ public class HttpServletRequestParameterMap extends StringKeyedMapAdapter<Object
 		if (request instanceof MultipartHttpServletRequest) {
 			MultipartHttpServletRequest multipartRequest = (MultipartHttpServletRequest) request;
 			List<MultipartFile> data = multipartRequest.getMultiFileMap().get(key);
-			if (data != null && data.size() > 0) {
+			if (data != null && !data.isEmpty()) {
 				if (data.size() == 1) {
 					return data.get(0);
 				} else {

@@ -38,7 +38,7 @@ public class SpringConvertingConverterAdapter implements Converter {
 	/**
 	 * The ConversionService that will perform the conversion.
 	 */
-	private ConversionService conversionService;
+	private final ConversionService conversionService;
 
 	public SpringConvertingConverterAdapter(Class<?> sourceClass, Class<?> targetClass,
 			ConversionService conversionService) {

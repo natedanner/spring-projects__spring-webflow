@@ -43,7 +43,7 @@ public class MapAdaptablePropertyAccessor implements PropertyAccessor {
 	}
 
 	public boolean canWrite(EvaluationContext context, Object target, String name) {
-		return (target instanceof MutableAttributeMap);
+		return target instanceof MutableAttributeMap;
 	}
 
 	@SuppressWarnings({ "rawtypes", "unchecked" })

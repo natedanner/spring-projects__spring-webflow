@@ -46,7 +46,7 @@ public class ActionState extends TransitionableState {
 	/**
 	 * The list of actions to be executed when this state is entered.
 	 */
-	private ActionList actionList = new ActionList();
+	private final ActionList actionList = new ActionList();
 
 	/**
 	 * Creates a new action state.

@@ -38,7 +38,7 @@ public class DefaultFlowModelHolder implements FlowModelHolder {
 
 	private FlowModel flowModel;
 
-	private FlowModelBuilder flowModelBuilder;
+	private final FlowModelBuilder flowModelBuilder;
 
 	private boolean assembling;
 

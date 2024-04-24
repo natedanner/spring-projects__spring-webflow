@@ -33,8 +33,8 @@ import org.springframework.webflow.test.MockRequestContext;
 
 public class TextToTransitionCriteriaTests {
 
-	private MockFlowBuilderContext serviceLocator = new MockFlowBuilderContext("flowId");
-	private TextToTransitionCriteria converter = new TextToTransitionCriteria(serviceLocator);
+	private final MockFlowBuilderContext serviceLocator = new MockFlowBuilderContext("flowId");
+	private final TextToTransitionCriteria converter = new TextToTransitionCriteria(serviceLocator);
 
 	@AfterEach
 	public void tearDown() {

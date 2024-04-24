@@ -29,7 +29,7 @@ public class CompositeStringExpression implements Expression {
 	/**
 	 * The expression array.
 	 */
-	private Expression[] expressions;
+	private final Expression[] expressions;
 
 	/**
 	 * Creates a new composite string expression.

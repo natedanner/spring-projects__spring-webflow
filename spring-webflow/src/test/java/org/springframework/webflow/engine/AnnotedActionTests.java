@@ -28,7 +28,7 @@ import org.springframework.webflow.test.MockRequestContext;
 
 public class AnnotedActionTests {
 
-	private AnnotatedAction action = new AnnotatedAction(new TestAction());
+	private final AnnotatedAction action = new AnnotatedAction(new TestAction());
 
 	private MockRequestContext context;
 

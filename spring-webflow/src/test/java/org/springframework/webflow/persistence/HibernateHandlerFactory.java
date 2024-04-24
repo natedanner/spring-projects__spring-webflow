@@ -29,8 +29,8 @@ public class HibernateHandlerFactory {
 	static HibernateHandler create(DataSource dataSource) throws Exception {
 		return new Hibernate5Handler(dataSource);
 	}
-	
-	private static class Hibernate5Handler implements HibernateHandler {
+
+	private static final class Hibernate5Handler implements HibernateHandler {
 
 		private final org.springframework.orm.hibernate5.HibernateTemplate template;
 

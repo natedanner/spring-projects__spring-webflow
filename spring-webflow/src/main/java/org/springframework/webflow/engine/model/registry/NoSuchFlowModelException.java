@@ -29,7 +29,7 @@ public class NoSuchFlowModelException extends FlowException {
 	/**
 	 * The id of the flow model that could not be located.
 	 */
-	private String flowModelId;
+	private final String flowModelId;
 
 	/**
 	 * Creates an exception indicating a flow model could not be found.

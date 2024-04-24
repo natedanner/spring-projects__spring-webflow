@@ -41,12 +41,12 @@ public class FlowAssembler {
 	/**
 	 * The flow builder strategy used to construct the flow from its component parts.
 	 */
-	private FlowBuilder flowBuilder;
+	private final FlowBuilder flowBuilder;
 
 	/**
 	 * Context needed to initialize the builder so it can perform a build operation.
 	 */
-	private FlowBuilderContext flowBuilderContext;
+	private final FlowBuilderContext flowBuilderContext;
 
 	/**
 	 * Create a new flow assembler that will direct Flow assembly using the specified builder strategy.

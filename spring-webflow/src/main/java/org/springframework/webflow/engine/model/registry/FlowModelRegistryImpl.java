@@ -34,7 +34,7 @@ public class FlowModelRegistryImpl implements FlowModelRegistry, FlowModelHolder
 	/**
 	 * The map of loaded Flow models maintained in this registry.
 	 */
-	private Map<String, FlowModelHolder> flowModels;
+	private final Map<String, FlowModelHolder> flowModels;
 
 	/**
 	 * An optional parent flow model registry.

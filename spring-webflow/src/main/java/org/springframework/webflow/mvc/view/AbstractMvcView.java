@@ -78,9 +78,9 @@ public abstract class AbstractMvcView implements View {
 
 	private static final MappingResultsCriteria MAPPING_ERROR = new MappingError();
 
-	private org.springframework.web.servlet.View view;
+	private final org.springframework.web.servlet.View view;
 
-	private RequestContext requestContext;
+	private final RequestContext requestContext;
 
 	private ExpressionParser expressionParser;
 

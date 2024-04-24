@@ -88,9 +88,9 @@ public class SelectionTrackingActionListener implements ActionListener {
 		Method method = this.valueMethodCache.get(parentClass);
 		if (method == null) {
 			method = ReflectionUtils.findMethod(parentClass, "getValue");
-			this.valueMethodCache.put(parentClass, (method != null) ? method : NO_MATCH);
+			this.valueMethodCache.put(parentClass, method != null ? method : NO_MATCH);
 		}
-		return (method != NO_MATCH) ? method : null;
+		return method != NO_MATCH ? method : null;
 	}
 
 }

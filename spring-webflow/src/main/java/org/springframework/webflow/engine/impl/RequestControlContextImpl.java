@@ -49,27 +49,27 @@ class RequestControlContextImpl implements RequestControlContext {
 	/**
 	 * The owning flow execution carrying out this request.
 	 */
-	private FlowExecutionImpl flowExecution;
+	private final FlowExecutionImpl flowExecution;
 
 	/**
 	 * A source context for the caller who initiated this request.
 	 */
-	private ExternalContext externalContext;
+	private final ExternalContext externalContext;
 
 	/**
 	 * A source context for messages to record during this flow execution request.
 	 */
-	private MessageContext messageContext;
+	private final MessageContext messageContext;
 
 	/**
 	 * The request scope data map. Never null, initially empty.
 	 */
-	private LocalAttributeMap<Object> requestScope = new LocalAttributeMap<>();
+	private final LocalAttributeMap<Object> requestScope = new LocalAttributeMap<>();
 
 	/**
 	 * Holder for contextual properties describing the currently executing request; never null, initially empty.
 	 */
-	private LocalAttributeMap<Object> attributes = new LocalAttributeMap<>();
+	private final LocalAttributeMap<Object> attributes = new LocalAttributeMap<>();
 
 	/**
 	 * The current event being processed by this flow; initially null.
@@ -251,7 +251,7 @@ class RequestControlContextImpl implements RequestControlContext {
 			return true;
 		}
 		Boolean redirectInSameState = flowExecution.getAttributes().getBoolean("redirectInSameState");
-		return (redirectInSameState != null) ? redirectInSameState : getRedirectOnPause();
+		return redirectInSameState != null ? redirectInSameState : getRedirectOnPause();
 	}
 
 	public boolean getEmbeddedMode() {

@@ -23,9 +23,9 @@ import org.springframework.binding.mapping.Mapping;
  */
 public class Success extends AbstractMappingResult {
 
-	private Object mappedValue;
+	private final Object mappedValue;
 
-	private Object originalValue;
+	private final Object originalValue;
 
 	/**
 	 * Creates a new success result.

@@ -60,7 +60,7 @@ import org.springframework.webflow.core.collection.AttributeMap;
  */
 public class FilenameFlowUrlHandler extends DefaultFlowUrlHandler {
 
-	private UrlPathHelper urlPathHelper;
+	private final UrlPathHelper urlPathHelper;
 
 	public FilenameFlowUrlHandler() {
 		urlPathHelper = new UrlPathHelper();
@@ -89,7 +89,7 @@ public class FilenameFlowUrlHandler extends DefaultFlowUrlHandler {
 		}
 		int begin = urlPath.lastIndexOf('/', end) + 1;
 		int paramIndex = urlPath.indexOf(';', begin);
-		end = (paramIndex != -1 && paramIndex < end ? paramIndex : end);
+		end = paramIndex != -1 && paramIndex < end ? paramIndex : end;
 		return urlPath.substring(begin, end);
 	}
 

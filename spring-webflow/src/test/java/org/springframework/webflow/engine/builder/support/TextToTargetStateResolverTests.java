@@ -26,8 +26,8 @@ import org.springframework.webflow.test.MockRequestContext;
 
 public class TextToTargetStateResolverTests {
 
-	private MockFlowBuilderContext serviceLocator = new MockFlowBuilderContext("flowId");
-	private TextToTargetStateResolver converter = new TextToTargetStateResolver(serviceLocator);
+	private final MockFlowBuilderContext serviceLocator = new MockFlowBuilderContext("flowId");
+	private final TextToTargetStateResolver converter = new TextToTargetStateResolver(serviceLocator);
 
 	@Test
 	public void testStatic() throws Exception {

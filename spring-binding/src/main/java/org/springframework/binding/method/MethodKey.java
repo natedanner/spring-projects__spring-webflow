@@ -34,18 +34,18 @@ public class MethodKey implements Serializable {
 	/**
 	 * The class the method is a member of.
 	 */
-	private Class<?> declaredType;
+	private final Class<?> declaredType;
 
 	/**
 	 * The method name.
 	 */
-	private String methodName;
+	private final String methodName;
 
 	/**
 	 * The method's actual parameter types. Could contain null values if the user did not specify a parameter type for
 	 * the corresponding parameter
 	 */
-	private Class<?>[] parameterTypes;
+	private final Class<?>[] parameterTypes;
 
 	/**
 	 * A cached handle to the resolved method (may be null).
@@ -225,7 +225,7 @@ public class MethodKey implements Serializable {
 	 * @return if the target type is assignable from the value type
 	 */
 	private static boolean isAssignable(Class<?> targetType, Class<?> valueType) {
-		return (targetType.isAssignableFrom(valueType) || targetType.equals(PRIMITIVE_WRAPPER_TYPE_MAP.get(valueType)));
+		return targetType.isAssignableFrom(valueType) || targetType.equals(PRIMITIVE_WRAPPER_TYPE_MAP.get(valueType));
 	}
 
 	/**

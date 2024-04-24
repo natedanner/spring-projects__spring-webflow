@@ -77,9 +77,9 @@ public class HibernateFlowExecutionListener implements FlowExecutionListener {
 	/** The name of the attribute the flow {@link Session persistence context} is indexed under. */
 	public static final String PERSISTENCE_CONTEXT_ATTRIBUTE = "persistenceContext";
 
-	private SessionFactory sessionFactory;
+	private final SessionFactory sessionFactory;
 
-	private TransactionTemplate transactionTemplate;
+	private final TransactionTemplate transactionTemplate;
 
 	private Interceptor entityInterceptor;
 
@@ -176,7 +176,7 @@ public class HibernateFlowExecutionListener implements FlowExecutionListener {
 	}
 
 	private boolean isParentPersistenceContext(FlowSession flowSession) {
-		return ((!flowSession.isRoot()) && isPersistenceContext(flowSession.getParent().getDefinition()));
+		return (!flowSession.isRoot()) && isPersistenceContext(flowSession.getParent().getDefinition());
 	}
 
 	private Session createSession(RequestContext context) {

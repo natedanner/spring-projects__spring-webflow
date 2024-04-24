@@ -43,7 +43,7 @@ public class ActionTransitionCriteria implements TransitionCriteria {
 	/**
 	 * The action to execute when the criteria is tested, annotated with usage attributes.
 	 */
-	private Action action;
+	private final Action action;
 
 	/**
 	 * Create action transition criteria delegating to the specified action.

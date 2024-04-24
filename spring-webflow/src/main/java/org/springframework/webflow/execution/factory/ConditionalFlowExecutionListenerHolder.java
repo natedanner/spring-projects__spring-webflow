@@ -36,12 +36,12 @@ class ConditionalFlowExecutionListenerHolder {
 	/**
 	 * The held listener.
 	 */
-	private FlowExecutionListener listener;
+	private final FlowExecutionListener listener;
 
 	/**
 	 * The listener criteria set.
 	 */
-	private Set<FlowExecutionListenerCriteria> criteriaSet = new LinkedHashSet<>(3);
+	private final Set<FlowExecutionListenerCriteria> criteriaSet = new LinkedHashSet<>(3);
 
 	/**
 	 * Create a new conditional flow execution listener holder.

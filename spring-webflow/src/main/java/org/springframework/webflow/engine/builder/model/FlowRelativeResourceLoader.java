@@ -29,7 +29,7 @@ import org.springframework.core.io.ResourceLoader;
  */
 class FlowRelativeResourceLoader implements ResourceLoader {
 
-	private Resource flowResource;
+	private final Resource flowResource;
 
 	public FlowRelativeResourceLoader(Resource resource) {
 		this.flowResource = resource;

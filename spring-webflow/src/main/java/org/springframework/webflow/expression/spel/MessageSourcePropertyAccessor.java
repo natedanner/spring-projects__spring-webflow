@@ -48,7 +48,7 @@ public class MessageSourcePropertyAccessor implements PropertyAccessor {
 	}
 
 	public boolean canRead(EvaluationContext context, Object target, String name) {
-		return (getMessage(target, name) != null);
+		return getMessage(target, name) != null;
 	}
 
 	public TypedValue read(EvaluationContext context, Object target, String name) {
@@ -69,7 +69,7 @@ public class MessageSourcePropertyAccessor implements PropertyAccessor {
 
 	private Locale getLocale() {
 		RequestContext requestContext = RequestContextHolder.getRequestContext();
-		return (requestContext != null) ? requestContext.getExternalContext().getLocale() : LocaleContextHolder
+		return requestContext != null ? requestContext.getExternalContext().getLocale() : LocaleContextHolder
 				.getLocale();
 	}
 

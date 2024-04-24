@@ -32,7 +32,7 @@ public class RenderAction extends AbstractAction {
 	/**
 	 * The expression for setting the scoped attribute value.
 	 */
-	private Expression[] fragmentExpressions;
+	private final Expression[] fragmentExpressions;
 
 	/**
 	 * Creates a new render action.

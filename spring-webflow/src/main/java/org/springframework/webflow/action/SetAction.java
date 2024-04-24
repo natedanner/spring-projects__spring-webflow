@@ -32,12 +32,12 @@ public class SetAction extends AbstractAction {
 	/**
 	 * The expression for setting the scoped attribute value.
 	 */
-	private Expression nameExpression;
+	private final Expression nameExpression;
 
 	/**
 	 * The expression for resolving the scoped attribute value.
 	 */
-	private Expression valueExpression;
+	private final Expression valueExpression;
 
 	/**
 	 * Creates a new set attribute action.

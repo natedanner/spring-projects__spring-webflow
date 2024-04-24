@@ -40,17 +40,17 @@ import org.springframework.validation.ObjectError;
  */
 public class MessageContextErrors extends AbstractErrors {
 
-	private MessageContext messageContext;
+	private final MessageContext messageContext;
 
-	private String objectName;
+	private final String objectName;
 
-	private Object boundObject;
+	private final Object boundObject;
 
-	private ExpressionParser expressionParser;
+	private final ExpressionParser expressionParser;
 
-	private MappingResults mappingResults;
+	private final MappingResults mappingResults;
 
-	private MessageCodesResolver bindingErrorMessageCodesResolver;
+	private final MessageCodesResolver bindingErrorMessageCodesResolver;
 
 	/**
 	 * Creates a new message context errors adapter.
@@ -157,7 +157,7 @@ public class MessageContextErrors extends AbstractErrors {
 		return expressionParser.parseExpression(field, new FluentParserContext().evaluate(boundObject.getClass()));
 	}
 
-	private static MessageCriteria GLOBAL_ERROR = message -> {
+	private static final MessageCriteria GLOBAL_ERROR = message -> {
 		if (message.getSeverity() == Severity.ERROR && message.getSource() == null) {
 			return true;
 		} else {
@@ -165,7 +165,7 @@ public class MessageContextErrors extends AbstractErrors {
 		}
 	};
 
-	private static MessageCriteria FIELD_ERROR = message -> {
+	private static final MessageCriteria FIELD_ERROR = message -> {
 		if (message.getSeverity() == Severity.ERROR && message.getSource() instanceof String) {
 			return true;
 		} else {
@@ -182,11 +182,7 @@ public class MessageContextErrors extends AbstractErrors {
 		}
 
 		public boolean test(MappingResult result) {
-			if (result.isError() && property.equals(result.getMapping().getTargetExpression().getExpressionString())) {
-				return true;
-			} else {
-				return false;
-			}
+			return result.isError() && property.equals(result.getMapping().getTargetExpression().getExpressionString());
 		}
 	}
 }

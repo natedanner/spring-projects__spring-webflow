@@ -26,9 +26,9 @@ import org.springframework.webflow.core.collection.CollectionUtils;
  */
 public class FlowExecutionOutcome {
 
-	private String id;
+	private final String id;
 
-	private AttributeMap<Object> output;
+	private final AttributeMap<Object> output;
 
 	/**
 	 * Creates a new flow execution outcome
@@ -38,7 +38,7 @@ public class FlowExecutionOutcome {
 	public FlowExecutionOutcome(String id, AttributeMap<Object> output) {
 		super();
 		this.id = id;
-		this.output = (output != null ? output : CollectionUtils.EMPTY_ATTRIBUTE_MAP);
+		this.output = output != null ? output : CollectionUtils.EMPTY_ATTRIBUTE_MAP;
 	}
 
 	/**

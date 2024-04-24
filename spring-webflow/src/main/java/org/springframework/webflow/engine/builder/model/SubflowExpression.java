@@ -21,9 +21,9 @@ import org.springframework.webflow.definition.registry.FlowDefinitionLocator;
 
 class SubflowExpression implements Expression {
 
-	private Expression subflowId;
+	private final Expression subflowId;
 
-	private FlowDefinitionLocator flowDefinitionLocator;
+	private final FlowDefinitionLocator flowDefinitionLocator;
 
 	public SubflowExpression(Expression subflowId, FlowDefinitionLocator flowDefinitionLocator) {
 		this.subflowId = subflowId;

@@ -25,7 +25,7 @@ import org.springframework.webflow.engine.Flow;
  */
 public class FlowExecutionListenerCriteriaFactoryTests {
 
-	private FlowExecutionListenerCriteriaFactory factory = new FlowExecutionListenerCriteriaFactory();
+	private final FlowExecutionListenerCriteriaFactory factory = new FlowExecutionListenerCriteriaFactory();
 
 	@Test
 	public void testAllFlows() {
